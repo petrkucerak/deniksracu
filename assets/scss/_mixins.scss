@@ -1,0 +1,48 @@
+// = mixins =
+// ===============================================
+
+
+// breakpoints
+// ===============================================
+@mixin for-size($size, $width: 1000px) {
+   
+    // by resolution
+    @if $size == 'hd-up' {
+        @media (min-width: 720px) { @content; }
+    } @else if $size == 'fhd-up' {
+        @media (min-width: 1080px) { @content; }
+    } @else if $size == 'qhd-up' {
+        @media (min-width: 1440px) { @content; }
+    } @else if $size == 'uhd-up' {
+        @media (min-width: 2160px) { @content; }
+    } 
+
+    // by devices
+    @else if $size == 'tablet' {
+        @media (max-width: 768px) { @content; }
+    } 
+
+    // natural breakpoints (project-specific)
+    @else if $size == 'bp-down-500'{
+        @media (max-width: 500px) { @content; }
+    }
+
+    // custom natural breakpoints (project+element-specific)
+    @else if $size == 'bp-up'{
+        @media (min-width: $width) { @content; }
+    }
+
+    // custom natural breakpoints down (project+element-specific)
+    @else if $size == 'bp-down'{
+        @media (max-width: $width) { @content; }
+    }
+  }
+
+  @mixin flexbox($align: center, $justify: center, $direction: row){
+    
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    @content;
+  }
