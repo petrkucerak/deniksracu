@@ -16,31 +16,6 @@
     </header>
     <section>
         <div id="mapa"></div>
-        <script type="text/javascript">
-            var stred = SMap.Coords.fromWGS84(14.41, 50.08);
-            var mapa = new SMap(JAK.gel("mapa"), stred, 13);
-
-            mapa.addDefaultLayer(SMap.DEF_BASE).enable();
-            
-            var mouse = new SMap.Control.Mouse(SMap.MOUSE_PAN | SMap.MOUSE_WHEEL | SMap.MOUSE_ZOOM); /* Ovládání myší */
-            mapa.addControl(mouse);
-
-            // responzivita mapy
-            var sync = new SMap.Control.Sync({bottomSpace:30});
-            mapa.addControl(sync);
-
-            // pridani vrstvy znacek
-            var layer = new SMap.Layer.Marker();
-            mapa.addLayer(layer);
-            layer.enable();
-
-            // pridani znacky polohy uzivatele
-            //var location = SMap.Coords.fromWGS84(14.41790, 50.12655);
-            var options = {};
-            var marker = new SMap.Marker(stred, "location", options);
-            layer.addMarker(marker);
-
-	    </script>
     
     </section>
     <footer>
