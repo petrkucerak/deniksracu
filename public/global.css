@@ -14,7 +14,7 @@ body {
 .map {
 	height: 100%;
 	width: 100%;
-	z-index: -1;
+	z-index: 2;
 }
 /* stylik butomu na hlavni obrazovce */
 .homeButton {
@@ -26,7 +26,7 @@ body {
 	height: 3.5rem;
 	width: 3.5rem;
 	position: fixed;
-	z-index: 1;
+	z-index: 3;
 	cursor: pointer;
 	text-align: center;
 }

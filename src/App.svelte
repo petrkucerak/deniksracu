@@ -1,14 +1,14 @@
 <script>
-	import L, { Class } from "leaflet";
+	import L from "leaflet";
 
 	let map;
 
-	// const initialView = [50.0755, 14.4378];
-	const initialView = get_user_position();
+	/* inti view Prague */
+	const initialView = [50.0755, 14.4378];
 	function createMap(container) {
 		let m = L.map(container, { preferCanvas: true }).setView(
 			initialView,
-			15
+			14
 		);
 		L.tileLayer(
 			"https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
@@ -25,6 +25,7 @@
 
 	function mapAction(container) {
 		map = createMap(container);
+		// map.locateUser();
 
 		return {
 			destroy: () => {
@@ -40,16 +41,16 @@
 		}
 	}
 
+
+	// function locateUser() {
+	// 	this.map.locate({ setView: true });
+	// }
+
 	/* return user position */
-	function get_user_position() {
-		let ret = [50.0755, 14.4378];
-		return ret;
-	}
 
 	/* my position 🤠 */
 
 	/* toilet positions 🚽 */
-	
 </script>
 
 <svelte:window on:resize={resizeMap} /><link
