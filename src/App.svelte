@@ -1,15 +1,14 @@
 <script>
-
-	import L from "leaflet";
+	import L, { Class } from "leaflet";
 
 	let map;
 
-
-	const initialView = [50.0755, 14.4378];
+	// const initialView = [50.0755, 14.4378];
+	const initialView = get_user_position();
 	function createMap(container) {
 		let m = L.map(container, { preferCanvas: true }).setView(
 			initialView,
-			10
+			15
 		);
 		L.tileLayer(
 			"https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
@@ -40,6 +39,13 @@
 			map.invalidateSize();
 		}
 	}
+
+	/* return user position */
+	function get_user_position() {
+		let ret = [50.0755, 14.4378];
+		return ret;
+	}
+	
 </script>
 
 <svelte:window on:resize={resizeMap} /><link
@@ -48,7 +54,11 @@
 	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
 	crossorigin=""
 />
-<div class="map" style="height:100%;width:100%" use:mapAction />
+
+<div class="map" use:mapAction />
+<button id="addNewPoint" class="homeButton">🚽</button>
+<button id="setting" class="homeButton">🧻</button>
+<button id="profile" class="homeButton">🤠</button>
 
 <style>
 	/* add some css style */

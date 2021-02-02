@@ -17,6 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@icons-pack/svelte-simple-icons": "^1.10.1",
     "leaflet": "^1.7.1",
     "sirv-cli": "^1.0.0"
   }
