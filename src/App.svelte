@@ -45,6 +45,10 @@
 		let ret = [50.0755, 14.4378];
 		return ret;
 	}
+
+	/* my position 🤠 */
+
+	/* toilet positions 🚽 */
 	
 </script>
 
@@ -56,9 +60,8 @@
 />
 
 <div class="map" use:mapAction />
-<button id="addNewPoint" class="homeButton">🚽</button>
-<button id="setting" class="homeButton">🧻</button>
-<button id="profile" class="homeButton">🤠</button>
+<button id="addNewPoint" class="homeButton">➕</button>
+<button id="profile" class="homeButton">🧻</button>
 
 <style>
 	/* add some css style */
