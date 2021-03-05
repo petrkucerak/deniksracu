@@ -67,3 +67,4 @@
 <style>
 	/* add some css style */
 </style>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c14fb519754b4b5b95f4a2e417a20d54", "spa": true}'></script><!-- End Cloudflare Web Analytics -->
