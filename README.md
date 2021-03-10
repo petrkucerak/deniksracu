@@ -1,3 +1,14 @@
+# Denik sracu
+
+## Motivace
+
+*Představte si, že jste v Praze na procházce, ale najednou vás přepadne potřeba si zajít na velkou. Co uděláte? Není nic jednoduššího než vytáhnout mobilní telefon, přejít na stránku [deniksracu.online](http://deniksracu.online) a podívat se, jaká nejkvalitnější a nejbližší toaleta může vyřešit váš problém.*
+
+
+## Projektova dokumentace
+
+[notion](https://www.notion.so/petrkucerak/Specifikace-aplikace-6c8c02432c14421ab90660463a181739)
+
 ## Get started
 
 Install the dependencies...
