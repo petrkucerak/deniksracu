@@ -2,7 +2,7 @@
    // import app variables
 
    import L from "leaflet";
-   import getCords from "Geolocation";
+   import {getCords} from "./Cords.svelte";
 
    // define global varibales
 
@@ -30,6 +30,9 @@
     * @param container
     */
    function mapAction(container) {
+
+      getCords();
+
       map = createMap(container);
 
       return {
