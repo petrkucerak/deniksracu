@@ -1,9 +1,13 @@
 <script>
+   // import app variables
+
 	import L from "leaflet";
+
+   // define global varibales
 
 	let map;
 
-	/* inti view Prague */
+	// inti view Prague
 	const initialView = [50.0755, 14.4378];
 	function createMap(container) {
 		let m = L.map(container, { preferCanvas: true }).setView(initialView, 14);
@@ -22,7 +26,6 @@
 
 	function mapAction(container) {
 		map = createMap(container);
-		// map.locateUser();
 
 		return {
 			destroy: () => {
@@ -38,15 +41,6 @@
 		}
 	}
 
-	// function locateUser() {
-	// 	this.map.locate({ setView: true });
-	// }
-
-	/* return user position */
-
-	/* my position 🤠 */
-
-	/* toilet positions 🚽 */
 </script>
 
 <svelte:window on:resize={resizeMap} /><link
