@@ -26,7 +26,6 @@
 
 	function mapAction(container) {
 		map = createMap(container);
-		// map.locateUser();
 
 		return {
 			destroy: () => {
@@ -42,15 +41,6 @@
 		}
 	}
 
-	// function locateUser() {
-	// 	this.map.locate({ setView: true });
-	// }
-
-	/* return user position */
-
-	/* my position 🤠 */
-
-	/* toilet positions 🚽 */
 </script>
 
 <svelte:window on:resize={resizeMap} /><link
