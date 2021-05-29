@@ -47,7 +47,7 @@ import MapUtilities, { setMapToLoaction } from "./MapUtilities.svelte";
    export function getCords() {
       console.log("User cords are");
 
-      // create id vaiable to watching user location
+      // create the id vaiable to watching user location
       id = navigator.geolocation.watchPosition(
          cordSucess,
          cordError,
@@ -56,6 +56,7 @@ import MapUtilities, { setMapToLoaction } from "./MapUtilities.svelte";
 
       function cordSucess(pos) {
          let crd = pos.coords;
+
          // to save cords into object
          userLocation.setUserLocation(crd.latitude, crd.longitude);
       }
