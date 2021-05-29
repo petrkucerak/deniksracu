@@ -1,4 +1,4 @@
-<script>
+<script context="module">
 /**
  * Function set map to current location.
  * @param latit

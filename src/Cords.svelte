@@ -1,5 +1,7 @@
 <script context="module">
    import { error } from "console";
+import App from "./App.svelte";
+import MapUtilities, { setMapToLoaction } from "./MapUtilities.svelte";
 
    // define global varibales
    let id, cordOptions;
@@ -21,6 +23,8 @@
          this.longitude = long;
          console.log("The cords has been set.")
          console.log(this.latitude + " " + this.longitude);
+
+         setMapToLoaction(latit, long);
       },
 
       /**
