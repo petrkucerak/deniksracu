@@ -3,9 +3,21 @@
 
    // define global varibales
    let id, cordOptions;
-   const handler = {};
-   let userLocation = [0, 0];
-   const proxy = new Proxy(userLocation, handler);
+   
+   /**
+    * Object represent user Locations
+    */
+   let userLocation = {
+      latitude: null,
+      longitude: null,
+      setUserLocation: function(latit, long){
+         this.latitude = latit;
+         this.longitude = long;
+      },
+      getUserLocation: function(){
+         return [this.latitude, this.longitude];
+      }
+   };
 
    cordOptions = {
       enableHighAccuracy: true,
@@ -18,8 +30,6 @@
     */
    export function getCords() {
       console.log("User cords are");
-
-      console.log(proxy);
 
       // create id vaiable to watching user location
       id = navigator.geolocation.watchPosition(
@@ -36,6 +46,8 @@
 
          userLocation[0] = crd.latitude;
          userLocation[1] = crd.longitude;
+
+         console.log(userLocation[0] + " " + userLocation[1]);
       }
 
       function cordError(err) {
