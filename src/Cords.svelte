@@ -10,10 +10,22 @@
    let userLocation = {
       latitude: null,
       longitude: null,
+      
+      /**
+       * The method set cords
+       * @param latit
+       * @param long
+       */
       setUserLocation: function(latit, long){
          this.latitude = latit;
          this.longitude = long;
+         console.log("The cords has been set.")
+         console.log(this.latitude + " " + this.longitude);
       },
+
+      /**
+       * The method return user cords
+       */
       getUserLocation: function(){
          return [this.latitude, this.longitude];
       }
@@ -40,14 +52,8 @@
 
       function cordSucess(pos) {
          let crd = pos.coords;
-
-         console.log("Latitude: " + crd.latitude);
-         console.log("Longitude: " + crd.longitude);
-
-         userLocation[0] = crd.latitude;
-         userLocation[1] = crd.longitude;
-
-         console.log(userLocation[0] + " " + userLocation[1]);
+         // to save cords into object
+         userLocation.setUserLocation(crd.latitude, crd.longitude);
       }
 
       function cordError(err) {
