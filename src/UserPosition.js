@@ -13,9 +13,10 @@ export function placeUserPosition(map) {
          map.removeLayer(current_position);
       }
 
-      current_position = L.marker(e.latlng, { icon: userIcon })
-         .addTo(map)
-         .openPopup();
+      current_position = L.marker(e.latlng, { 
+         icon: userIcon,
+         riseOffset: 1000 // default is 250
+      }).addTo(map);
    }
 
    function onLocationError(e) {
@@ -35,6 +36,6 @@ export function placeUserPosition(map) {
 
    // first time locate user
    locate();
-   // call update user positon every 3 seconds... forever
-   setInterval(updateUserPosition, 3000);
+   // call update user positon every 10 seconds... forever
+   setInterval(updateUserPosition, 10000);
 }

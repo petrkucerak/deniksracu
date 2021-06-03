@@ -17,11 +17,12 @@ export let toilets = [];
 export let renderedToilets = L.canvas({ padding: 0.5 });
 
 /**
- * Load toilets from json into array.
+ * Load toilets from JSON into array.
  * @param {*} toilets 
+ * @param {*} map 
  */
 export function loadToilets(toilets, map) {
-   fetch("./toilets.json")
+   fetch("./assets/toilets.json")
       .then(response => {
          return response.json();
       })
@@ -32,12 +33,16 @@ export function loadToilets(toilets, map) {
          })
       });
 }
-
+/**
+ * Render toilet marks into the map.
+ * @param {*} toilets 
+ * @param {*} map 
+ */
 export function setToiletMarks(toilets, map) {
    toilets.forEach(toilet => {
       L.marker([toilet.longitude, toilet.latitude], {
          renderer: renderedToilets,
          icon: toiletIcon
-      }).addTo(map);
+      }).addTo(map).bindPopup("Hura trunit");
    });
 }

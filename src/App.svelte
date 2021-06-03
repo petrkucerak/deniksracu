@@ -31,11 +31,13 @@
     * @param container
     */
    function mapAction(container) {
+      // init map
       map = createMap(container);
-
-      placeUserPosition(map);
-
+      
+      // load toilets
       loadToilets(toilets, map);
+      // get user position
+      placeUserPosition(map);
 
       return {
          destroy: () => {
@@ -52,7 +54,6 @@
       if (map) {
          map.invalidateSize();
       }
-      
    }
 </script>
 
