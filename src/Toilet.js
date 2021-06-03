@@ -1,3 +1,5 @@
+import { toiletIcon } from './CustomMarks.js';
+
 /**
  * Definition of the toilet class.
  */
@@ -33,8 +35,9 @@ export function loadToilets(toilets, map) {
 
 export function setToiletMarks(toilets, map) {
    toilets.forEach(toilet => {
-      L.circleMarker([toilet.longitude, toilet.latitude],{
-         renderer: renderedToilets
+      L.marker([toilet.longitude, toilet.latitude], {
+         renderer: renderedToilets,
+         icon: toiletIcon
       }).addTo(map);
    });
 }
