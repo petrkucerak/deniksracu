@@ -33,7 +33,7 @@
    function mapAction(container) {
       // init map
       map = createMap(container);
-      
+
       // load toilets
       loadToilets(toilets, map);
       // get user position
@@ -65,5 +65,5 @@
 />
 
 <div class="map" use:mapAction />
-<button id="addNewPoint" class="homeButton">➕</button>
+<a href="/form"><button id="addNewPoint" class="homeButton">➕</button></a>
 <button id="profile" class="homeButton">🧻</button>
