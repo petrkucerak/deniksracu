@@ -1,21 +1,21 @@
+
+import {userIcon} from './CustomMarks.js';
+
 /**
  * Display user positon on the map
  * @param {*} map 
  */
 export function placeUserPosition(map) {
    // placeholders for the L.marker and L.circle representing user's current position and accuracy
-   let current_position, current_accuracy;
+   let current_position;
 
    function onLocationFound(e) {
       // if position defined, then remove the existing position marker and accuracy circle from the map
       if (current_position) {
          map.removeLayer(current_position);
-         map.removeLayer(current_accuracy);
       }
 
-      let radius = e.accuracy / 1;
-
-      current_position = L.marker(e.latlng)
+      current_position = L.marker(e.latlng, {icon: userIcon})
          .addTo(map)
          .openPopup();
    }
@@ -29,11 +29,11 @@ export function placeUserPosition(map) {
 
    // wrap map.locate in a function
    function locate() {
-      map.locate({ setView: true, maxZoom: 20 });
+      map.locate({ setView: true, maxZoom: 20, enableHighAccuracy: true });
    }
 
    function updateUserPosition(){
-
+      map.locate({ enableHighAccuracy: true });
    }
 
    // first time locate user
