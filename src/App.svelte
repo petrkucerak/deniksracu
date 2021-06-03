@@ -3,6 +3,7 @@
 
    import L from "leaflet";
    import { placeUserPosition } from "./UserPosition.js";
+   import { Toilet, toilets } from "./Toilet.js";
 
    // define global varibales
 
@@ -33,6 +34,15 @@
       map = createMap(container);
 
       placeUserPosition(map);
+
+      let toilet1 = new Toilet(50.1002, 14.5497);
+      toilets.push(toilet1);
+      for (let i = 0; i < 100; i++) {
+         let toilet = new Toilet(50.1002 + (i*0.03), 14.5497 + (i*0.05));
+         toilets.push(toilet);
+      }
+
+      console.log(JSON.stringify(toilets));
 
       return {
          destroy: () => {
