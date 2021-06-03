@@ -21,7 +21,7 @@ export function placeUserPosition(map) {
    }
 
    function onLocationError(e) {
-      alert(e.message);
+      alert("Pro lepsi sluzby povol pristup k GPS\n(kod chyby: " + e.message + ")");
    }
 
    map.on("locationfound", onLocationFound);
