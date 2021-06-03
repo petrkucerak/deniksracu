@@ -2,8 +2,6 @@
    // import app variables
 
    import L from "leaflet";
-   import { getCords, userLocation } from "./Cords.svelte";
-   import { setMapToLoaction } from "./MapUtilities.svelte";
 
    // define global varibales
 
