@@ -1,6 +1,10 @@
+/**
+ * Display user positon on the map
+ * @param {*} map 
+ */
 export function placeUserPosition(map) {
    // placeholders for the L.marker and L.circle representing user's current position and accuracy
-   var current_position, current_accuracy;
+   let current_position, current_accuracy;
 
    function onLocationFound(e) {
       // if position defined, then remove the existing position marker and accuracy circle from the map
@@ -9,14 +13,11 @@ export function placeUserPosition(map) {
          map.removeLayer(current_accuracy);
       }
 
-      var radius = e.accuracy / 1;
+      let radius = e.accuracy / 1;
 
       current_position = L.marker(e.latlng)
          .addTo(map)
-         .bindPopup("You are within " + radius + " meters from this point")
          .openPopup();
-
-      current_accuracy = L.circle(e.latlng, radius).addTo(map);
    }
 
    function onLocationError(e) {
@@ -28,9 +29,15 @@ export function placeUserPosition(map) {
 
    // wrap map.locate in a function
    function locate() {
-      map.locate({ setView: true, maxZoom: 16 });
+      map.locate({ setView: true, maxZoom: 20 });
    }
 
-   // call locate every 3 seconds... forever
-   setInterval(locate, 3000);
+   function updateUserPosition(){
+
+   }
+
+   // first time locate user
+   locate();
+   // call update user positon every 3 seconds... forever
+   setInterval(updateUserPosition, 3000);
 }
