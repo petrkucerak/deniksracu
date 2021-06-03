@@ -2,7 +2,7 @@
  * Custom icon for user position
  */
 export let userIcon = L.icon({
-   iconUrl: './img/cowboy.webp',
+   iconUrl: './assets/img/cowboy.webp',
    iconSize: [38, 38] // size of the icon
 });
 
@@ -10,6 +10,6 @@ export let userIcon = L.icon({
  * Custom icon for toilet positions.
  */
 export let toiletIcon = L.icon({
-   iconUrl: './img/toilet-small.webp',
+   iconUrl: './assets/img/toilet-small.webp',
    iconSize: [30, 30]
 });

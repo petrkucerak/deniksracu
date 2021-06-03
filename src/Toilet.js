@@ -22,7 +22,7 @@ export let renderedToilets = L.canvas({ padding: 0.5 });
  * @param {*} map 
  */
 export function loadToilets(toilets, map) {
-   fetch("./toilets.json")
+   fetch("./assets/toilets.json")
       .then(response => {
          return response.json();
       })
