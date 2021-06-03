@@ -31,8 +31,11 @@
     * @param container
     */
    function mapAction(container) {
+      // init map
       map = createMap(container);
+      // load toilets
       loadToilets(toilets, map);
+      // get user position
       placeUserPosition(map);
 
       return {
@@ -50,7 +53,6 @@
       if (map) {
          map.invalidateSize();
       }
-      
    }
 </script>
 
