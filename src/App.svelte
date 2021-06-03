@@ -3,6 +3,7 @@
 
    import L from "leaflet";
    import { placeUserPosition } from "./UserPosition.js";
+   import { Toilet, toilets, loadToilets, setToiletMarks } from "./Toilet.js";
 
    // define global varibales
 
@@ -34,6 +35,8 @@
 
       placeUserPosition(map);
 
+      loadToilets(toilets, map);
+
       return {
          destroy: () => {
             map.remove();
@@ -49,6 +52,7 @@
       if (map) {
          map.invalidateSize();
       }
+      
    }
 </script>
 
