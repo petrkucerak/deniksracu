@@ -32,10 +32,8 @@
     */
    function mapAction(container) {
       map = createMap(container);
-
-      placeUserPosition(map);
-
       loadToilets(toilets, map);
+      placeUserPosition(map);
 
       return {
          destroy: () => {

@@ -35,6 +35,6 @@ export function placeUserPosition(map) {
 
    // first time locate user
    locate();
-   // call update user positon every 3 seconds... forever
-   setInterval(updateUserPosition, 3000);
+   // call update user positon every 10 seconds... forever
+   setInterval(updateUserPosition, 30000);
 }
