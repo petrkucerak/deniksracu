@@ -13,7 +13,10 @@ export function placeUserPosition(map) {
          map.removeLayer(current_position);
       }
 
-      current_position = L.marker(e.latlng, { icon: userIcon })
+      current_position = L.marker(e.latlng, { 
+         icon: userIcon,
+         riseOffset: 1000 // default is 250
+      })
          .addTo(map)
          .openPopup();
    }
