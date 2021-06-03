@@ -1,3 +1,6 @@
+/**
+ * Custom icon for user position
+ */
 export let userIcon = L.icon({
    iconUrl: './img/cowboy.png',
 
