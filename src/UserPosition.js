@@ -16,9 +16,7 @@ export function placeUserPosition(map) {
       current_position = L.marker(e.latlng, { 
          icon: userIcon,
          riseOffset: 1000 // default is 250
-      })
-         .addTo(map)
-         .openPopup();
+      }).addTo(map);
    }
 
    function onLocationError(e) {
