@@ -38,6 +38,6 @@ export function setToiletMarks(toilets, map) {
       L.marker([toilet.longitude, toilet.latitude], {
          renderer: renderedToilets,
          icon: toiletIcon
-      }).addTo(map);
+      }).addTo(map).bindPopup("Hura trunit");
    });
 }
