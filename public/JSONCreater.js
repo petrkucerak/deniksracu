@@ -27,18 +27,36 @@ function saveData(){
       return;
    }
 
-   const name = document.getElementById('fname').value;
-   const longtitude = document.getElementById('fLong').value;
-   const latitude = document.getElementById('fLan').value;
-   const yesNo1 = document.getElementById('fbollCistota').value;
-   const yesNo2 = document.getElementById('fbollPapir').value;
-   const yesNo3 = document.getElementById('fbollZamek').value;
-   const yesNo4 = document.getElementById('fbollUmyvadlo').value;
-   const yesNo5 = document.getElementById('fbollPlacene').value;
-   const bonus = document.getElementById('fbonus').value;
-   const tweet = document.getElementById('ftweet').value;
+   let name = document.getElementById('fname').value;
+   let longtitude = document.getElementById('fLong').value;
+   let latitude = document.getElementById('fLan').value;
+   let yesNo1 = document.getElementById('fbollCistota').checked;
+   let yesNo2 = document.getElementById('fbollPapir').checked;
+   let yesNo3 = document.getElementById('fbollZamek').checked;
+   let yesNo4 = document.getElementById('fbollUmyvadlo').checked;
+   let yesNo5 = document.getElementById('fbollPlacene').checked;
+   let bonus = document.getElementById('fbonus').value;
+   let tweet = document.getElementById('ftweet').value;
 
-   const toilet = new Toilet(longtitude, latitude, name, [yesNo1, yesNo2, yesNo3, yesNo4, yesNo5], bonus, tweet);
+   let toilet = new Toilet(longtitude, latitude, name, [yesNo1, yesNo2, yesNo3, yesNo4, yesNo5], bonus, tweet);
 
-   console.log(toilet);
+   console.log(JSON.stringify(toilet));
+   let date = new Date();
+   let fileName = date.getTime();
+   downloadObjectAsJson(toilet, fileName);
 }
+
+/**
+ * Download data as a JSON.
+ * @param {*} exportObj 
+ * @param {*} exportName 
+ */
+function downloadObjectAsJson(exportObj, exportName){
+   var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+   var downloadAnchorNode = document.createElement('a');
+   downloadAnchorNode.setAttribute("href",     dataStr);
+   downloadAnchorNode.setAttribute("download", exportName + ".json");
+   document.body.appendChild(downloadAnchorNode); // required for firefox
+   downloadAnchorNode.click();
+   downloadAnchorNode.remove();
+ }
