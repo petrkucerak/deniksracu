@@ -4,9 +4,13 @@ import { toiletIcon } from './CustomMarks.js';
  * Definition of the toilet class.
  */
 export class Toilet {
-   constructor(longitude, latitude) {
+   constructor(longitude, latitude, name, yesNo, bonus, tweet) {
       this.longitude = longitude;
       this.latitude = latitude;
+      this.name = name;
+      this.yesNo = yesNo;
+      this.bonus = bonus;
+      this.tweet = tweet;
    }
 }
 /**
