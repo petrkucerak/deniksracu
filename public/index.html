@@ -14,7 +14,7 @@
    <!-- <script defer src='/build/bundle.js'></script> -->
 </head>
 
-<body>
+<body onload="runJs()">
    <header>
       <div class="header">
          <div class="header__logo">
@@ -53,6 +53,9 @@
          <a href="/mapa"><button>Najít trůn</button></a>
          <a href="/"><button>Přidat nový trůn</button></a>
       </div>
+      <video id="video" loop>
+         <source src="assets/videos/toilet-find.mp4">
+      </video>
    </section>
 
    <section class="about" id="about">
@@ -119,6 +122,16 @@
    <!-- Cloudflare Web Analytics -->
    <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c14fb519754b4b5b95f4a2e417a20d54", "spa": true}'></script> -->
    <!-- End Cloudflare Web Analytics -->
+   <script>
+      function runJs() {
+         playVideo();
+      }
+
+      function playVideo() {
+         let myVideo = document.getElementById("video");
+         myVideo.play();
+      }
+   </script>
 </body>
 
 </html>
