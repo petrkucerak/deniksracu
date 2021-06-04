@@ -1,0 +1,29 @@
+.form {
+   ul {
+      padding-left: 0;
+      li {
+         list-style: none;
+         margin-top: 0.5rem;
+         margin-bottom: 0.5rem;
+      }
+   }
+   h2 {
+      margin-bottom: 0.5rem;
+      margin-top: 2rem;
+   }
+   textarea {
+      width: 90vw;
+      max-width: 800px;
+      font-family: $font;
+      font-size: 1.3rem;
+      color: $black;
+   }
+   input {
+      font-family: $font;
+      color: $black;
+      font-size: 1.3rem;
+   }
+   button {
+      margin-bottom: 3rem;
+   }
+}
