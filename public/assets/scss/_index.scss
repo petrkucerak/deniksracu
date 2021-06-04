@@ -1,4 +1,18 @@
-section, header {
+section,
+header {
    max-width: 1000px;
    width: 90vw;
+}
+
+.header {
+   &__buttons {
+      @include flexbox {
+         flex-direction: row;
+         justify-content: center;
+      }
+      button{
+         text-transform: uppercase;
+         margin: 1rem;
+      }
+   }
 }
