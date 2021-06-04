@@ -57,7 +57,10 @@ export function setToiletMarks(toilets, map) {
    });
 }
 
-// function getToiletDetails(toilet){
-//    let str = ""
-//    return str;
-// }
+function getToiletDetails(toilet) {
+   let str = ""
+   str += `<h2> ${toilet.name} </h2>`;
+   str += `<p>${toilet.tweet}</p>`;
+   str += `<span>${toilet.longitude}N, ${toilet.latitude}E`;
+   return str;
+}
