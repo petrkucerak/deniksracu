@@ -5,6 +5,10 @@ section {
 
 .intro {
    min-height: 50vw;
+   @include flexbox{
+      flex-direction: column;
+      align-items: flex-start;
+   }
    #video {
       position: absolute;
       z-index: -1;
@@ -20,13 +24,24 @@ section {
       }
    }
    &__buttons {
+      margin-bottom: 15vw;
+      width: 100%;
       @include flexbox {
          flex-direction: row;
-         justify-content: center;
+         justify-content: flex-start;
+         flex-wrap: wrap;
+      }
+      @include for-size("bp-down-738"){
+         margin-bottom: 0;
+         @include flexbox {
+            justify-content: center;
+         }
       }
       button {
          text-transform: uppercase;
-         margin: 1rem;
+         margin-right: 2rem;
+         margin-bottom: 2rem;
+         font-size: 1.1rem;
       }
    }
 }
