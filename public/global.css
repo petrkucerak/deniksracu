@@ -34,7 +34,19 @@ body {
 	bottom: 1rem;
 	right: 1rem;
 }
+#addNewPoint img {
+   width: 1.8rem;
+   position: absolute;
+   bottom: 0.9rem;
+   right: 0.85rem;
+}
 #profile {
 	top: 1rem;
 	right: 1rem;
+}
+#profile img {
+   width: 1.8rem;
+   position: absolute;
+   top: 0.9rem;
+   right: 0.8rem;
 }
