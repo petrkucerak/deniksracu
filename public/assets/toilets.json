@@ -1,30 +1,30 @@
 [
    {
-      "longitude": 50.1002,
-      "latitude": 14.5497
+      "longitude": "50.0919839",
+      "latitude": "14.4575447",
+      "name": "Záchod pod Žižkou",
+      "yesNo": [
+         true,
+         true,
+         true,
+         true,
+         true
+      ],
+      "bonus": "větrání",
+      "tweet": "Jsou ve firmě, třeba se nebát projít přes recepci."
    },
    {
-      "longitude": 50.1002,
-      "latitude": 14.5497
-   },
-   {
-      "longitude": 50.1302,
-      "latitude": 14.5997
-   },
-   {
-      "longitude": 50.1602,
-      "latitude": 14.6497
-   },
-   {
-      "longitude": 50.1902,
-      "latitude": 14.6997
-   },
-   {
-      "longitude": 50.2202,
-      "latitude": 14.7496
-   },
-   {
-      "longitude": 50.2502,
-      "latitude": 14.7997
+      "longitude": "50.0884778",
+      "latitude": "14.3972222",
+      "name": "Dům u Dvou Slunců",
+      "yesNo": [
+         true,
+         true,
+         false,
+         false,
+         false
+      ],
+      "bonus": "atmosféra",
+      "tweet": "Záchod je po schodech dolů. Po pár pivečkách celkem náročné."
    }
 ]
