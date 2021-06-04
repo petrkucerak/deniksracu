@@ -65,5 +65,5 @@
 />
 
 <div class="map" use:mapAction />
-<a href="/form"><button id="addNewPoint" class="homeButton">➕</button></a>
+<button id="addNewPoint" class="homeButton">➕</button>
 <button id="profile" class="homeButton">🧻</button>

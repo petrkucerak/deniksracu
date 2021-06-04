@@ -1,8 +1,7 @@
 import App from './App.svelte';
-import form from './form.js';
 
 let app = new App({
-	target: document.querySelector('#main')
+	target: document.body
 });
 
 export default app;
