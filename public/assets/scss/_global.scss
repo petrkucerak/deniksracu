@@ -1,5 +1,12 @@
 body {
+   color: $black;
+   margin: 0;
+   padding: 0px;
+   box-sizing: border-box;
    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
       sans-serif;
-      color: red;
+
+   @include flexbox{
+      flex-direction: column;
+   }
 }
