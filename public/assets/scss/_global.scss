@@ -19,10 +19,13 @@ button {
    border: 1px solid $black;
    padding: 0.7rem;
    cursor: pointer;
-   transition: .5s;
+   transition: 0.5s;
 
    &:hover {
       background-color: $white-dark;
       transform: scale(1.05);
    }
+}
+html {
+   scroll-behavior: smooth;
 }
