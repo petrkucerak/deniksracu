@@ -4,6 +4,21 @@ section {
 }
 
 .intro {
+   min-height: 50vw;
+   #video {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0.2;
+   }
+   @include for-size("bp-down-738") {
+      min-height: auto;
+      #video {
+         display: none;
+      }
+   }
    &__buttons {
       @include flexbox {
          flex-direction: row;
@@ -75,23 +90,6 @@ header {
    svg {
       height: 1.5rem;
       color: $black;
-   }
-}
-.intro {
-   min-height: 50vw;
-   #video {
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.2;
-   }
-   @include for-size("bp-down-738") {
-      min-height: auto;
-      #video {
-         display: none;
-      }
    }
 }
 
