@@ -43,10 +43,21 @@ export function loadToilets(toilets, map) {
  * @param {*} map 
  */
 export function setToiletMarks(toilets, map) {
+   // interate all toilets
    toilets.forEach(toilet => {
+      // create custom popup
+      let myPopUp = L.popup()
+         .setContent(getToiletDetails(toilet));
+
+      // create the toilet mark
       L.marker([toilet.longitude, toilet.latitude], {
          renderer: renderedToilets,
          icon: toiletIcon
-      }).addTo(map).bindPopup("Hura trunit");
+      }).addTo(map).bindPopup(myPopUp);
    });
 }
+
+// function getToiletDetails(toilet){
+//    let str = ""
+//    return str;
+// }
