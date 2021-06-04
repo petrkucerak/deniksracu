@@ -1,40 +1,93 @@
-html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
+html,
+body {
+   position: relative;
+   width: 100%;
+   height: 100%;
 }
 
 body {
-	color: #333;
-	margin: 0;
-	padding: 0px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+   color: #333;
+   margin: 0;
+   padding: 0px;
+   box-sizing: border-box;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+      sans-serif;
 }
 .map {
-	height: 100%;
-	width: 100%;
-	z-index: 2;
+   height: 100%;
+   width: 100%;
+   z-index: 2;
 }
 /* stylik butomu na hlavni obrazovce */
 .homeButton {
-	border-radius: 50%;
-	border: none;
-	outline: none;
-	background-color: #333;
-	font-size: 1.5rem;
-	height: 3.5rem;
-	width: 3.5rem;
-	position: fixed;
-	z-index: 3;
-	cursor: pointer;
-	text-align: center;
+   border-radius: 50%;
+   border: none;
+   outline: none;
+   background-color: #333;
+   font-size: 1.5rem;
+   height: 3.5rem;
+   width: 3.5rem;
+   position: fixed;
+   z-index: 3;
+   cursor: pointer;
+   text-align: center;
 }
 #addNewPoint {
-	bottom: 1rem;
-	right: 1rem;
+   bottom: 1rem;
+   right: 1rem;
+}
+#addNewPoint img {
+   width: 1.8rem;
+   position: absolute;
+   bottom: 0.9rem;
+   right: 0.85rem;
 }
 #profile {
-	top: 1rem;
-	right: 1rem;
+   top: 1rem;
+   right: 1rem;
+}
+#profile img {
+   width: 1.8rem;
+   position: absolute;
+   top: 0.9rem;
+   right: 0.8rem;
+}
+
+/* style of the cards*/
+
+.card h2 {
+   font-size: 2rem;
+   margin-bottom: 0;
+}
+
+.card {
+   font-size: 1rem;
+}
+
+.category {
+   border: none;
+   outline: none;
+   cursor: auto;
+   font-size: 1.1rem;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+      sans-serif;
+   margin: 0.2rem;
+}
+
+.cistota {
+   background: #311847;
+   color: white;
+}
+.papir {
+   background: #d7af70;
+}
+.zamek {
+   background: #291f1e;
+   color: white;
+}
+.uyvadlo {
+   background: #ef5d60;
+}
+.placene {
+   background: #19647e;
 }

@@ -43,10 +43,36 @@ export function loadToilets(toilets, map) {
  * @param {*} map 
  */
 export function setToiletMarks(toilets, map) {
+   // interate all toilets
    toilets.forEach(toilet => {
+      // create custom popup
+      let myPopUp = L.popup()
+         .setContent(getToiletDetails(toilet));
+
+      // create the toilet mark
       L.marker([toilet.longitude, toilet.latitude], {
          renderer: renderedToilets,
          icon: toiletIcon
-      }).addTo(map).bindPopup("Hura trunit");
+      }).addTo(map).bindPopup(myPopUp);
    });
+}
+
+function getToiletDetails(toilet) {
+   let str = ""
+   str += `<div class="card"><h2> ${toilet.name} </h2>`;
+   // normal category
+   if(toilet.yesNo[0]) str += `<button class="category cistota">čistota</button>`;
+   if(toilet.yesNo[1]) str += `<button class="category papir">toaletní papír</button>`;
+   if(toilet.yesNo[2]) str += `<button class="category zamek">zámek na dveře</button>`;
+   if(toilet.yesNo[3]) str += `<button class="category uyvadlo">umyvadlo</button>`;
+   if(toilet.yesNo[4]) str += `<button class="category placene">placené</button>`;
+
+   // special category
+   if (toilet.bonus != "") {
+      str += `<p><strong>Něco navíc:</strong> ${toilet.bonus}</p>`;
+   }
+   // other info
+   str += `<p>${toilet.tweet}</p>`;
+   str += `<span>${toilet.longitude}N, ${toilet.latitude}E</span></div>`;
+   return str;
 }
