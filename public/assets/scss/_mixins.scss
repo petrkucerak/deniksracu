@@ -37,6 +37,13 @@
       }
    }
 
+   // natural breakpoints (project-specific)
+   @else if $size == "bp-down-738" {
+      @media (max-width: 738px) {
+         @content;
+      }
+   }
+
    // display (project-specific)
    @else if $size == "bp-down-1000" {
       @media (max-width: 1000px) {

@@ -15,9 +15,9 @@ section {
       }
    }
 }
-header{
+header {
    width: 100%;
-   @include flexbox{
+   @include flexbox {
       flex-direction: column;
    }
    box-shadow: $shadows;
@@ -30,20 +30,49 @@ header{
       flex-direction: row;
       justify-content: space-between;
    }
-   h1 {
-      font-size: 1.4rem;
-      text-transform: uppercase;
+   @include for-size('bp-down-738'){
+      display: none;
    }
+   &__logo {
+      @include flexbox{
+         flex-direction: row;
+         justify-content: flex-start;
+      }
+      span {
+         font-size: 1.5rem;
+         text-transform: uppercase;
+         margin-right: .5rem;
+      }
+      #title{
+         font-size: 1.3rem;
+         font-weight: 600;
+         @include for-size('tablet'){
+            display: none;
+         }
+      }
+   }
+
    nav {
       @include flexbox {
          flex-direction: row;
+         justify-content: center;
       }
       a {
          color: $black;
          text-decoration: none;
+         margin-right: .75rem;
+         margin-left: .75rem;
+         transition: .5s;
+         &:hover{
+            transform: scale(1.05);
+         }
          li {
             list-style: none;
          }
       }
+   }
+   svg {
+      height: 1.5rem;
+      color: $black;
    }
 }
