@@ -5,7 +5,7 @@
    <meta charset='utf-8'>
    <meta name='viewport' content='width=device-width,initial-scale=1'>
 
-   <title>Deník sráčů</title>
+   <title>Deník sráčů - form</title>
 
    <link rel='icon' type='image/png' href='/favicon.png'>
    <!-- <link rel='stylesheet' href='/global.css'> -->
@@ -23,16 +23,16 @@
          </div>
          <nav>
             <a href="#about">
-               <li>O projektu</li>
+               <li>Základní info</li>
             </a>
-            <a href="#steps">
-               <li>Jak to celé funguje</li>
+            <a href="#yesNo">
+               <li>Základní kategorie</li>
             </a>
-            <a href="#rules">
-               <li>Sráčovo desatero</li>
+            <a href="#details">
+               <li>Bonusové kategorie</li>
             </a>
-            <a href="#media">
-               <li>Píše se o nás</li>
+            <a href="#bonus">
+               <li>Doplňující informace</li>
             </a>
          </nav>
          <a href="https://github.com/petrkucerak/deniksracu" target="_blank" rel="noopener noreferrer"><svg
@@ -45,6 +45,33 @@
             </svg></a>
       </div>
    </header>
+   <section>
+      <h1>Přidání nového místa</h1>
+      <p>Než něco odešleš, pořádně vše po sobě zkontroluj!</p>
+   <form action="">
+      <label id="about" for="fname">Název místa:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+
+      <label id="yesNo" for="fbollCistota">Čistota <em>(smrdí to tam, jsou na zemi loužičky, je zachod v pořádku, ...)</em>: </label>
+      <input type="checkbox" id="fbollCistota" name="fbollCistota"><br>
+      <label for="fbollPapir">Toaletní papír: </label>
+      <input type="checkbox" id="fbollPapir" name="fbollPapir"><br>
+      <label for="fbollZamek">Zámek na uzamčení dveří: </label>
+      <input type="checkbox" id="fbollZamek" name="fbollZamek"><br>
+      <label for="fbollUmyvadlo">Uspokojivé umyvadlo <em>(voda + mýdlo)</em>: </label>
+      <input type="checkbox" id="fbollUmyvadlo" name="fbollUmyvadlo"><br>
+      <label for="fbollPlacene">Placené: </label>
+      <input type="checkbox" id="fbollPlacene" name="fbollPlacene"><br><br>
+
+      <label id="details" for="fbonus">Má záchod něco navíc <em>(větrání, věšáček, vícevrstvý toaleťák, štětka do záchodu, zásuvka, wifi, noviny, výhled, polička, hudba, stálé světlo, ...)</em>: </label>
+      <input type="text" name="fbonus" id="fbonus"><br><br>
+
+      <label id="bonus" for="ftweet">Volitelné slovní hodnocení: </label>
+      <input type="text" name="ftweet" id="ftweet"><br><br>
+
+      <input type="submit" value="Odeslat">
+   </form>
+   </section>
 </body>
 
 </html>
