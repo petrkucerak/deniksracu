@@ -12,7 +12,10 @@
    }
 }
 
-
+/**
+ * Save data into the class structure
+ * @returns 
+ */
 function saveData(){
 
    if(document.getElementById('fLong').value == 50.0755 && document.getElementById('fLan').value == 14.4378){
