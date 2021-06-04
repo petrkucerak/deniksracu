@@ -30,23 +30,23 @@ header {
       flex-direction: row;
       justify-content: space-between;
    }
-   @include for-size('bp-down-738'){
+   @include for-size("bp-down-738") {
       display: none;
    }
    &__logo {
-      @include flexbox{
+      @include flexbox {
          flex-direction: row;
          justify-content: flex-start;
       }
       span {
          font-size: 1.5rem;
          text-transform: uppercase;
-         margin-right: .5rem;
+         margin-right: 0.5rem;
       }
-      #title{
+      #title {
          font-size: 1.3rem;
          font-weight: 600;
-         @include for-size('tablet'){
+         @include for-size("tablet") {
             display: none;
          }
       }
@@ -60,10 +60,10 @@ header {
       a {
          color: $black;
          text-decoration: none;
-         margin-right: .75rem;
-         margin-left: .75rem;
-         transition: .5s;
-         &:hover{
+         margin-right: 0.75rem;
+         margin-left: 0.75rem;
+         transition: 0.5s;
+         &:hover {
             transform: scale(1.05);
          }
          li {
@@ -74,5 +74,25 @@ header {
    svg {
       height: 1.5rem;
       color: $black;
+   }
+}
+
+.footer {
+   width: 100%;
+   background: $white-dark;
+   @include flexbox {
+      flex-direction: column;
+   }
+   &__social {
+      @include flexbox {
+         flex-direction: row;
+      }
+   }
+   a {
+      color: $black;
+      svg {
+         height: 1.5rem;
+         margin-left: 0.5rem;
+      }
    }
 }
