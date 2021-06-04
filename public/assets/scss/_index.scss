@@ -1,18 +1,49 @@
-section,
-header {
+section {
    max-width: 1000px;
    width: 90vw;
 }
 
-.header {
+.intro {
    &__buttons {
       @include flexbox {
          flex-direction: row;
          justify-content: center;
       }
-      button{
+      button {
          text-transform: uppercase;
          margin: 1rem;
+      }
+   }
+}
+header{
+   width: 100%;
+   @include flexbox{
+      flex-direction: column;
+   }
+   box-shadow: $shadows;
+}
+.header {
+   width: 90vw;
+   max-width: 1000px;
+   height: 4rem;
+   @include flexbox {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+   h1 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+   }
+   nav {
+      @include flexbox {
+         flex-direction: row;
+      }
+      a {
+         color: $black;
+         text-decoration: none;
+         li {
+            list-style: none;
+         }
       }
    }
 }

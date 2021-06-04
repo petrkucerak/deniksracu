@@ -4,6 +4,7 @@ body {
    padding: 0px;
    box-sizing: border-box;
    font-family: $font;
+   font-size: 1.2rem;
 
    @include flexbox {
       flex-direction: column;
