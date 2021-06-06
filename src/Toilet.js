@@ -57,6 +57,11 @@ export function setToiletMarks(toilets, map) {
    });
 }
 
+/**
+ * Function return string with info about place in html.
+ * @param {*} toilet 
+ * @returns 
+ */
 function getToiletDetails(toilet) {
    let str = ""
    str += `<div class="card"><h2> ${toilet.name} </h2>`;
