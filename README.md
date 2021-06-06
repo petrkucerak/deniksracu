@@ -7,7 +7,7 @@
 
 ## Projektova dokumentace
 
-[notion](https://www.notion.so/petrkucerak/Specifikace-aplikace-6c8c02432c14421ab90660463a181739)
+ve wiki projektu https://github.com/petrkucerak/deniksracu/wiki
 
 ## Get started
 
