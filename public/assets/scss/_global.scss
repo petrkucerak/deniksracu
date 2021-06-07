@@ -11,7 +11,7 @@ body {
    }
 }
 
-button {
+.button, button {
    outline: none;
    font-family: $font;
    color: $black;
@@ -20,6 +20,7 @@ button {
    padding: 0.7rem;
    cursor: pointer;
    transition: 0.5s;
+   text-decoration: none;
 
    &:hover {
       background-color: $white-dark;
