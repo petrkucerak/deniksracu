@@ -26,6 +26,33 @@
       ],
       "bonus": "atmosféra",
       "tweet": "Záchod je po schodech dolů. Po pár pivečkách celkem náročné."
-   },{"longitude":"50.2865014","latitude":"16.3561964","name":"DCŽM Vesmír","yesNo":[true,true,true,true,false],"bonus":"vtipy, ozvěna","tweet":"u záchodů je sprcha, takže dobré "}
-
+   },
+   {
+      "longitude": "50.2865014",
+      "latitude": "16.3561964",
+      "name": "DCŽM Vesmír",
+      "yesNo": [
+         true,
+         true,
+         true,
+         true,
+         false
+      ],
+      "bonus": "vtipy, ozvěna",
+      "tweet": "u záchodů je sprcha, takže dobré "
+   },
+   {
+      "longitude": "49.8231206",
+      "latitude": "16.1049697",
+      "name": "Zderaz",
+      "yesNo": [
+         true,
+         true,
+         false,
+         true,
+         false
+      ],
+      "bonus": "hudba",
+      "tweet": "Na záchodech je málo místa mezi dveřmi a záchodem."
+   }
 ]
