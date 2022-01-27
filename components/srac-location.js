@@ -4,13 +4,7 @@ export default function SracLocation() {
   const map = useMapEvent("click", () => {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        let crd = pos.coords;
-
-        console.log("Your current position is:");
-        console.log(`Latitude : ${crd.latitude}`);
-        console.log(`Longitude: ${crd.longitude}`);
-        console.log(`More or less ${crd.accuracy} meters.`);
-        map.flyTo([crd.latitude, crd.longitude]);
+        map.flyTo([pos.coords.latitude, pos.coords.longitude], 17);
       },
       (err) => {
         console.warn(`ERROR(${err.code}): ${err.message}`);
@@ -19,8 +13,6 @@ export default function SracLocation() {
         enableHighAccuracy: true,
       }
     );
-
-    // map.setView([50, 100]);
   });
   return null;
 }

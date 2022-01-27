@@ -8,7 +8,7 @@ export default function Map() {
   return (
     <MapContainer
       center={[50.08061, 14.4101822]}
-      zoom={20}
+      zoom={10}
       scrollWheelZoom={true}
       className="w-screen h-screen"
     >
