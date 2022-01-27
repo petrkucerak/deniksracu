@@ -1,13 +1,11 @@
-import Head from "next/head";
+import Meta from "../components/meta";
 import dynamic from "next/dynamic";
 
 export default function Home() {
   const MapSSR = dynamic(() => import("../components/map"), { ssr: false });
   return (
     <div>
-      <Head>
-        <title>Deník sráčů</title>
-      </Head>
+      <Meta />
       <main>
         <div id="map">
           <MapSSR />
