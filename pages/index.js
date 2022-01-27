@@ -7,6 +7,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Deník sráčů</title>
+        
       </Head>
       <main>
         <div id="map">
