@@ -6,8 +6,8 @@ import "leaflet/dist/leaflet.css";
 export default function Map() {
   return (
     <MapContainer
-      center={[40.8054, -74.0241]}
-      zoom={14}
+      center={[50.0806100, 14.4101822]}
+      zoom={20}
       scrollWheelZoom={false}
       className="w-screen h-screen"
     >
@@ -15,9 +15,6 @@ export default function Map() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={[40.8054, -74.0241]} draggable={true} animate={true}>
-        <Popup>Hey ! I live here</Popup>
-      </Marker>
     </MapContainer>
   );
 }
