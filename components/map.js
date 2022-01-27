@@ -2,13 +2,9 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
-import { sracLocation } from "../lib/location/srac-location";
 import SracLocation from "./srac-location";
 
 export default function Map() {
-  const { latitude, longitude, error } = sracLocation();
-  console.log(latitude, longitude, error);
-
   return (
     <MapContainer
       center={[50.08061, 14.4101822]}
