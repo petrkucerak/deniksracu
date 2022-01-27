@@ -2,7 +2,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
-import SracLocation from "./srac-location";
+import SracLocation from "../components/map-srac-location";
 
 export default function Map() {
   return (
@@ -12,11 +12,11 @@ export default function Map() {
       scrollWheelZoom={true}
       className="w-screen h-screen"
     >
-      <SracLocation />
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
+      <SracLocation />
     </MapContainer>
   );
 }
