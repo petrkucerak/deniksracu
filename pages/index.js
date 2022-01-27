@@ -7,8 +7,8 @@ export default function Home() {
         <title>Deník sráčů</title>
       </Head>
       <main>
-        <h1>Deník sráčů</h1>
-        <p>Stránka je momentálně v přestavbě.</p>
+        <h1 className="text-2xl">Deník sráčů</h1>
+        <p className="">Stránka je momentálně v přestavbě.</p>
       </main>
       <footer>
 
