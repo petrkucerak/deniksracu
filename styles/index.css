@@ -48,36 +48,11 @@
 
 /* Start of the tagsinput */
 .react-tagsinput {
-  /* background-color: #fff;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  padding-left: 5px;
-  padding-top: 5px; */
-  @apply bg-white overflow-hidden px-4 rounded w-full;
-
-}
-
-.react-tagsinput--focused {
-  /* border-color: #a5d24a; */
+  @apply bg-white rounded-xl p-3 mb-5;
 }
 
 .react-tagsinput-tag {
-  /* background-color: #cde69c;
-  border-radius: 2px;
-  border: 1px solid #a5d24a;
-  color: #638421;
-  display: inline-block;
-  font-family: sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  padding: 5px; */
-}
-
-.react-tagsinput-remove {
-  /* cursor: pointer;
-  font-weight: bold; */
+  @apply bg-gray-200 rounded px-2 py-1 mr-3 mb-3;
 }
 
 .react-tagsinput-tag a::before {
@@ -85,18 +60,9 @@
 }
 
 .react-tagsinput-input {
-  /* background: transparent;
-  border: 0;
-  color: #777;
-  font-family: sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  margin-bottom: 6px;
-  margin-top: 1px;
-  outline: none;
-  padding: 5px;
-  width: 80px; */
+  @apply border-0 bg-transparent w-full;
 }
+
 /* End of the tagsinput */
 
 /* Write you own custom component styles here */

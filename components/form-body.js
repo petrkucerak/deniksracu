@@ -19,7 +19,7 @@ export default function FormBody() {
         setSracLong(longitude);
     }
 
-    const [bonusTags, setBonusTags] = useState(["hudba"]);
+    const [bonusTags, setBonusTags] = useState([]);
 
     return (
         <main className="flex flex-col items-center">
@@ -90,10 +90,11 @@ export default function FormBody() {
                         title="Bonusové kategorie"
                         subtitle="Zaujalo tě na místních záchodech něco zajímavého? Pěkná hudba, inspirativní výhled, bezdrátové nabíječky či originální výzdoba? Neváhej a přidej speciální tagy."
                     />
-                    <TagsInput 
+                    <TagsInput
                         value={bonusTags}
                         onChange={setBonusTags}
                         maxTags={10}
+                        inputProps={{ placeholder: "přidej katogorii..." }}
                     />
                     <FormLocalTitle
                         title="Slovní komentář"
