@@ -94,12 +94,18 @@ export default function FormBody() {
                         value={bonusTags}
                         onChange={setBonusTags}
                         maxTags={10}
-                        inputProps={{ placeholder: "přidej katogorii..." }}
+                        inputProps={{ placeholder: "Přidej katogorii..." }}
                     />
                     <FormLocalTitle
                         title="Slovní komentář"
                         subtitle="Pro hodnocení ti nestačili výše zmíněné kategorie? Nevadí, všechno ostatní můžeš napsat sem!"
                     />
+                    <textarea
+                        className="rounded border-0 h-24 text-gray-600"
+                        defaultValue="Tvůj komentář ..."
+                    >
+
+                    </textarea>
                 </FormSectionBody>
             </FormSection>
             <FormSection>
