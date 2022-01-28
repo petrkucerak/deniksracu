@@ -48,7 +48,7 @@
 
 /* Start of the tagsinput */
 .react-tagsinput {
-  @apply bg-white rounded-xl p-3 mb-5;
+  @apply bg-white rounded p-3 mb-5;
 }
 
 .react-tagsinput-tag {

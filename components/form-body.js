@@ -32,7 +32,7 @@ export default function FormBody() {
                     />
                     <button
                         onClick={() => setSracLocation()}
-                        className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200"
+                        className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500 duration-200"
                     >
                         získat polohu
                     </button>
@@ -122,6 +122,18 @@ export default function FormBody() {
                     />
                 </FormSectionBody>
             </FormSection>
+            <div className="flex w-full flex-row justify-center max-w-screen-md px-5 mb-8">
+                <button
+                    className="rounded-xl m-3 bg-yellow-500 w-full py-2 text-white font-bold uppercase hover:bg-yellow-600 duration-200"
+                >
+                    Stáhnout
+                </button>
+                <button
+                    className="rounded-xl m-3 w-full py-2 bg-yellow-500 text-white font-bold uppercase hover:bg-yellow-600 duration-200"
+                >
+                    Vytvořit request
+                </button>
+            </div>
         </main>
     )
 }
