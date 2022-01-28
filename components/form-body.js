@@ -64,7 +64,7 @@ export default function FormBody() {
                 <FormSectionBody>
                     <FormLocalTitle
                         title="Hlavní kategorie"
-                        subtitle="Vědeckým vůzkumem jsme vyspecifikovali 5 hlavních základních kategorií, které u každého místa hodnotíme."
+                        subtitle="Vědeckým výzkumem jsme vyspecifikovali 5 hlavních základních kategorií, které u každého místa hodnotíme."
                     />
                     <FromToggleQuestion
                         title="Je záchod čistý?"
