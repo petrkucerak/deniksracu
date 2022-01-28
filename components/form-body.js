@@ -31,25 +31,30 @@ export default function FormBody() {
                     >
                         získat polohu
                     </button>
-                    <ul>
+                    <ul className="mb-8">
                         <li className="mb-2"> Šířka:{" "}
                             <input
                                 type="number"
-                                className="rounded border-0 outline-none"
+                                className="rounded border-0 outline-none text-gray-600"
                                 defaultValue={lat}
                             />
                         </li>
                         <li> Délka:{" "}
                             <input
                                 type="number"
-                                className="rounded border-0"
+                                className="rounded border-0 text-gray-600"
                                 defaultValue={long}
                             />
                         </li>
                     </ul>
                     <FormLocalTitle
-                        title="Souřadnice"
-                        subtitle="Přesné místo každé svatyně sraní je třeba určit přesnými informacemi o poloze. Pokud jsi na místě, využij možnost automatického vyplnění."
+                        title="Název místa"
+                        subtitle="Každý správná trůní místnost musí mít i svůj název. To, jak ji pojmenuješ, je jenom na tobě. Pamatuj, že název by měl být jedinečný, originální a popisovat dané místo."
+                    />
+                    <input
+                        type="text"
+                        className="rounded border-0 text-gray-600 outline-none w-full mb-8"
+                        defaultValue="např. Hospůdka Pod Zelenou lípou"
                     />
                 </FormSectionBody>
             </FormSection>
