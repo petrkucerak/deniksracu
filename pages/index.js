@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 export default function Home() {
   const MapSSR = dynamic(() => import("../components/map"), { ssr: false });
   return (
-    <div>
+    <>
       <Meta />
       <main>
         <div id="map">
@@ -12,6 +12,6 @@ export default function Home() {
         </div>
       </main>
       <footer></footer>
-    </div>
+    </>
   );
 }

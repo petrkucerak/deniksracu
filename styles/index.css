@@ -6,6 +6,65 @@
 @tailwind components;
 /* Stop purging. */
 
+/* Start of the toggle style */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+.toggle-switch .switch {
+  position: absolute;
+  cursor: pointer;
+  @apply bg-red-600;
+  border-radius: 25px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.2s ease;
+}
+.toggle-switch .switch::before {
+  position: absolute;
+  content: "";
+  left: 2px;
+  top: 2px;
+  width: 21px;
+  height: 21px;
+  @apply bg-white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.toggle-switch input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(25px);
+}
+.toggle-switch input[type="checkbox"]:checked + .switch {
+  @apply bg-green-500;
+}
+/* End of the toggle style */
+
+/* Start of the tagsinput */
+.react-tagsinput {
+  @apply bg-white rounded p-3 mb-5;
+}
+
+.react-tagsinput-tag {
+  @apply bg-gray-200 rounded px-2 py-1 mr-3 mb-3;
+}
+
+.react-tagsinput-tag a::before {
+  content: " ×";
+}
+
+.react-tagsinput-input {
+  @apply border-0 bg-transparent w-full;
+}
+
+/* End of the tagsinput */
+
 /* Write you own custom component styles here */
 
 /* Start purging... */
