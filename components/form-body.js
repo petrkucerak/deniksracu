@@ -92,7 +92,7 @@ export default function FormBody() {
                     />
                     <FromToggleQuestion
                         title="Jsou záchody zdarma?"
-                        id="hasWater"
+                        id="isFree"
                     />
                     <FormLocalTitle
                         title="Bonusové kategorie"
@@ -103,7 +103,6 @@ export default function FormBody() {
                         onChange={setBonusTags}
                         maxTags={10}
                         inputProps={{ placeholder: "Přidej katogorii..." }}
-                        id="bonusCategory"
                     />
                     <FormLocalTitle
                         title="Slovní komentář"
@@ -128,20 +127,26 @@ export default function FormBody() {
                         type="text"
                         className="rounded border-0 text-gray-600 outline-none w-full mb-8"
                         defaultValue="Tvoje přezdívka ...."
-                        id="nicName"
+                        id="nickName"
                     />
                 </FormSectionBody>
             </FormSection>
             <div className="flex w-full flex-row justify-center max-w-screen-md px-5 mb-8">
                 <button
                     className="rounded-xl m-3 bg-yellow-500 w-full py-2 text-white font-bold uppercase hover:bg-yellow-600 duration-200"
-                    onClick={() => Form2JSONToilet()}
+                    onClick={() => {
+                        let tags = bonusTags;
+                        Form2JSONToilet(tags);
+                    }}
                 >
                     Stáhnout
                 </button>
                 <button
                     className="rounded-xl m-3 w-full py-2 bg-yellow-500 text-white font-bold uppercase hover:bg-yellow-600 duration-200"
-                    onClick={() => Form2JSONToilet()}
+                    onClick={() => {
+                        let tags = bonusTags;
+                        Form2JSONToilet(tags);
+                    }}
                 >
                     Vytvořit request
                 </button>
