@@ -1,7 +1,10 @@
-export default function FormLocalTitle({ title }) {
+export default function FormLocalTitle({ title, subtitle }) {
     return (
-        <h3 className="text-xl font-semibold">
-            {title}
-        </h3>
+        <>
+            <h3 className="text-xl font-semibold">
+                {title}
+            </h3>
+            <p className="mb-3">{subtitle}</p>
+        </>
     )
 }
