@@ -6,11 +6,11 @@ import FormBody from "../components/form-body";
 export default function Form() {
 
   return (
-    <div>
+    <>
       <Meta />
       <FormHeader />
       <FormBody />
       <Footer />
-    </div>
+    </>
   );
 }
