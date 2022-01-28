@@ -5,6 +5,8 @@ import FormSectionHeader from "./form-section-header";
 import { sracLocation } from "../lib/srac-location";
 import { useState } from "react";
 import FromToggleQuestion from "./form-toggle-question";
+import TagsInput from "react-tagsinput";
+
 
 export default function FormBody() {
 
@@ -16,6 +18,8 @@ export default function FormBody() {
         setSracLat(latitude);
         setSracLong(longitude);
     }
+
+    const [bonusTags, setBonusTags] = useState(["hudba"]);
 
     return (
         <main className="flex flex-col items-center">
@@ -81,6 +85,19 @@ export default function FormBody() {
                     />
                     <FromToggleQuestion
                         title="Jsou záchody zdarma?"
+                    />
+                    <FormLocalTitle
+                        title="Bonusové kategorie"
+                        subtitle="Zaujalo tě na místních záchodech něco zajímavého? Pěkná hudba, inspirativní výhled, bezdrátové nabíječky či originální výzdoba? Neváhej a přidej speciální tagy."
+                    />
+                    <TagsInput 
+                        value={bonusTags}
+                        onChange={setBonusTags}
+                        maxTags={10}
+                    />
+                    <FormLocalTitle
+                        title="Slovní komentář"
+                        subtitle="Pro hodnocení ti nestačili výše zmíněné kategorie? Nevadí, všechno ostatní můžeš napsat sem!"
                     />
                 </FormSectionBody>
             </FormSection>
