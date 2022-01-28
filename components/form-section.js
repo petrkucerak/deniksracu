@@ -1,6 +1,6 @@
 export default function FormSection({ children }) {
     return (
-        <section className="">
+        <section className="w-screen max-w-screen-md px-8">
             {children}
         </section>
     );
