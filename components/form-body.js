@@ -37,15 +37,15 @@ export default function FormBody() {
                         získat polohu
                     </button>
                     <ul className="mb-8 w-full font-semibold">
-                        <li className="mb-2 w-full"> Šířka:{" "}
+                        <li className="mb-2"> Šířka:{" "}
                             <input
                                 type="number"
-                                className="rounded border-0 outline-none text-gray-600"
+                                className="rounded border-0 text-gray-600"
                                 defaultValue={lat}
                                 id="latitude"
                             />
                         </li>
-                        <li className="w-full"> Délka:{" "}
+                        <li className=""> Délka:{" "}
                             <input
                                 type="number"
                                 className="rounded border-0 text-gray-600"
