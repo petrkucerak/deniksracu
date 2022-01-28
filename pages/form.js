@@ -1,18 +1,16 @@
 import Meta from "../components/meta";
+import Footer from "../components/footer";
+import FormHeader from "../components/form-header";
+import FormBody from "../components/form-body";
 
-export default function Home() {
-  
+export default function Form() {
+
   return (
     <div>
       <Meta />
-      <main className="p-8">
-        <h1 className="text-4xl">Přidat nový záchod</h1>
-        <section>
-
-        </section>
-        <button className="">nahrát</button>
-      </main>
-      <footer></footer>
+      <FormHeader />
+      <FormBody />
+      <Footer />
     </div>
   );
 }
