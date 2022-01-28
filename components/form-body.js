@@ -1,4 +1,4 @@
-import FormPlacePicker from "./form-place-picker";
+import FormLocalTitle from "./form-local-title";
 import FormSection from "./form-section";
 import FormSectionBody from "./form-section-body";
 import FormSectionHeader from "./form-section-header";
@@ -9,7 +9,7 @@ export default function FormBody() {
             <FormSection>
                 <FormSectionHeader title="Lokace" />
                 <FormSectionBody>
-                    <FormPlacePicker />
+                    <FormLocalTitle title="Jaká je poloha svatyně sraní?" />
                 </FormSectionBody>
             </FormSection>
             <FormSection>
