@@ -4,6 +4,7 @@ import FormSectionBody from "./form-section-body";
 import FormSectionHeader from "./form-section-header";
 import { sracLocation } from "../lib/srac-location";
 import { useState } from "react";
+import FromToggleQuestion from "./form-toggle-question";
 
 export default function FormBody() {
 
@@ -61,7 +62,26 @@ export default function FormBody() {
             <FormSection>
                 <FormSectionHeader title="Hodnocení" />
                 <FormSectionBody>
-
+                    <FormLocalTitle
+                        title="Hlavní kategorie"
+                        subtitle="Vědeckým vůzkumem jsme vyspecifikovali 5 hlavních základních kategorií, které u každého místa hodnotíme."
+                    />
+                    <FromToggleQuestion
+                        title="Je záchod čistý?"
+                        description="nesmrdí to tam, nejsou na zemi loužičky, zachod je v pořádku"
+                    />
+                    <FromToggleQuestion
+                        title="Je u záchodu toaleťák?"
+                    />
+                    <FromToggleQuestion
+                        title="Lze zamknout dveře?"
+                    />
+                    <FromToggleQuestion
+                        title="Je u záchoda umyvadlo s tekoucí vodou a mýdlem?"
+                    />
+                    <FromToggleQuestion
+                        title="Jsou záchody zdarma?"
+                    />
                 </FormSectionBody>
             </FormSection>
             <FormSection>
