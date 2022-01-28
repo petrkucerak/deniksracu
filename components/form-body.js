@@ -6,7 +6,7 @@ import { sracLocation } from "../lib/srac-location";
 import { useState } from "react";
 import FromToggleQuestion from "./form-toggle-question";
 import TagsInput from "react-tagsinput";
-
+import { Form2JSONToilet } from "../lib/toilet";
 
 export default function FormBody() {
 
@@ -125,11 +125,13 @@ export default function FormBody() {
             <div className="flex w-full flex-row justify-center max-w-screen-md px-5 mb-8">
                 <button
                     className="rounded-xl m-3 bg-yellow-500 w-full py-2 text-white font-bold uppercase hover:bg-yellow-600 duration-200"
+                    onClick={() => Form2JSONToilet()}
                 >
                     Stáhnout
                 </button>
                 <button
                     className="rounded-xl m-3 w-full py-2 bg-yellow-500 text-white font-bold uppercase hover:bg-yellow-600 duration-200"
+                    onClick={() => Form2JSONToilet()}
                 >
                     Vytvořit request
                 </button>
