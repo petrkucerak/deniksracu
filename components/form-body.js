@@ -36,15 +36,15 @@ export default function FormBody() {
                     >
                         získat polohu
                     </button>
-                    <ul className="mb-8">
-                        <li className="mb-2"> Šířka:{" "}
+                    <ul className="mb-8 w-full font-semibold">
+                        <li className="mb-2 w-full"> Šířka:{" "}
                             <input
                                 type="number"
                                 className="rounded border-0 outline-none text-gray-600"
                                 defaultValue={lat}
                             />
                         </li>
-                        <li> Délka:{" "}
+                        <li className="w-full"> Délka:{" "}
                             <input
                                 type="number"
                                 className="rounded border-0 text-gray-600"
@@ -111,7 +111,15 @@ export default function FormBody() {
             <FormSection>
                 <FormSectionHeader title="Sráč" />
                 <FormSectionBody>
-
+                    <FormLocalTitle
+                        title="Přezdívka"
+                        subtitle="Pokud se chceš zařadit do síně slávy a stát se legendárním sráčem, nezapomeň se podepsat pod své hodnocení."
+                    />
+                    <input
+                        type="text"
+                        className="rounded border-0 text-gray-600 outline-none w-full mb-8"
+                        defaultValue="Tvoje přezdívka ...."
+                    />
                 </FormSectionBody>
             </FormSection>
         </main>
