@@ -27,7 +27,7 @@ export default function FormBody() {
                     />
                     <button
                         onClick={() => setSracLocation()}
-                        className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl"
+                        className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200"
                     >
                         získat polohu
                     </button>
@@ -49,7 +49,7 @@ export default function FormBody() {
                     </ul>
                     <FormLocalTitle
                         title="Název místa"
-                        subtitle="Každý správná trůní místnost musí mít i svůj název. To, jak ji pojmenuješ, je jenom na tobě. Pamatuj, že název by měl být jedinečný, originální a popisovat dané místo."
+                        subtitle="Každý správný trůní sál musí mít i svůj název. To, jak ji pojmenuješ, je jenom na tobě. Pamatuj, že název by měl být jedinečný, originální a popisovat dané místo."
                     />
                     <input
                         type="text"
