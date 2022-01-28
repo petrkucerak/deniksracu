@@ -1,6 +1,8 @@
 import Meta from "../components/meta";
+import { setJSON } from "../lib/post";
 
 export default function Home() {
+  setJSON();
   return (
     <div>
       <Meta />
