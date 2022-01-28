@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ToggleSwitch({setStatus }) {
+function ToggleSwitch({ setStatus, id }) {
   const [isToggled, setIsToggled] = useState(false);
   const onToggle = () => {
     setIsToggled(!isToggled);
@@ -9,7 +9,7 @@ function ToggleSwitch({setStatus }) {
   };
   return (
     <label className="toggle-switch">
-      <input type="checkbox" checked={isToggled} onChange={onToggle} />
+      <input type="checkbox" checked={isToggled} onChange={onToggle} id={id} />
       <span className="switch" />
     </label>
   );

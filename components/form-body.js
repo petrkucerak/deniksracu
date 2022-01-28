@@ -42,6 +42,7 @@ export default function FormBody() {
                                 type="number"
                                 className="rounded border-0 outline-none text-gray-600"
                                 defaultValue={lat}
+                                id="latitude"
                             />
                         </li>
                         <li className="w-full"> Délka:{" "}
@@ -49,6 +50,7 @@ export default function FormBody() {
                                 type="number"
                                 className="rounded border-0 text-gray-600"
                                 defaultValue={long}
+                                id="longtitude"
                             />
                         </li>
                     </ul>
@@ -60,6 +62,7 @@ export default function FormBody() {
                         type="text"
                         className="rounded border-0 text-gray-600 outline-none w-full mb-8"
                         defaultValue="např. Hospůdka Pod Zelenou lípou"
+                        id="placeName"
                     />
                 </FormSectionBody>
             </FormSection>
@@ -73,18 +76,23 @@ export default function FormBody() {
                     <FromToggleQuestion
                         title="Je záchod čistý?"
                         description="nesmrdí to tam, nejsou na zemi loužičky, zachod je v pořádku"
+                        id="isClean"
                     />
                     <FromToggleQuestion
                         title="Je u záchodu toaleťák?"
+                        id="hasPaper"
                     />
                     <FromToggleQuestion
                         title="Lze zamknout dveře?"
+                        id="canLock"
                     />
                     <FromToggleQuestion
                         title="Je u záchoda umyvadlo s tekoucí vodou a mýdlem?"
+                        id="hasWater"
                     />
                     <FromToggleQuestion
                         title="Jsou záchody zdarma?"
+                        id="hasWater"
                     />
                     <FormLocalTitle
                         title="Bonusové kategorie"
@@ -95,6 +103,7 @@ export default function FormBody() {
                         onChange={setBonusTags}
                         maxTags={10}
                         inputProps={{ placeholder: "Přidej katogorii..." }}
+                        id="bonusCategory"
                     />
                     <FormLocalTitle
                         title="Slovní komentář"
@@ -103,8 +112,8 @@ export default function FormBody() {
                     <textarea
                         className="rounded border-0 h-24 text-gray-600"
                         defaultValue="Tvůj komentář ..."
+                        id="comment"
                     >
-
                     </textarea>
                 </FormSectionBody>
             </FormSection>
@@ -119,6 +128,7 @@ export default function FormBody() {
                         type="text"
                         className="rounded border-0 text-gray-600 outline-none w-full mb-8"
                         defaultValue="Tvoje přezdívka ...."
+                        id="nicName"
                     />
                 </FormSectionBody>
             </FormSection>
