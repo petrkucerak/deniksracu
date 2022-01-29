@@ -33,13 +33,13 @@ export default function MapNav() {
             <nav className={navClass}>
                 <h1 className="mt-5 font-bold text-2xl normal-case border-b-2 border-gray-600">Deník sráčů</h1>
                 <Link href="/form">
-                    <a id="home" className="mt-5">Přidat nový trůn</a>
+                    <a id="form" className="mt-5">Přidat nový trůn</a>
                 </Link>
                 <Link href="/about">
                     <a id="about" className="mt-5" >O projektu</a>
                 </Link>
                 <Link href="/about">
-                    <a id="contact" className="mt-5" >Sráčovo desatero</a>
+                    <a id="rules" className="mt-5" >Sráčovo desatero</a>
                 </Link>
             </nav>
         </>
