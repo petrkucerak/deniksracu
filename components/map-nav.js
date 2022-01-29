@@ -6,20 +6,19 @@ export default function MapNav() {
     const [closeClass, setCloseClass] = useState("hidden");
     const [openClass, setOpenClass] = useState("z-[10001] fixed top-4 right-4 p-1 bg-white rounded border border-gray-600");
     const [navClass, setNavClass] = useState("hidden");
-    let isOpen = false;
+    const [isOpen, setIsOpen] = useState(false);
 
     function switchMenuContext() {
-        console.log(isOpen);
         if (isOpen) {
             setCloseClass("hidden");
             setOpenClass("z-[10001] fixed top-4 right-4 p-1 bg-white rounded border border-gray-600");
             setNavClass("hidden");
-            isOpen = false;
+            setIsOpen(false);
         } else {
             setCloseClass("z-[10001] fixed top-4 right-4 p-1 bg-white rounded border border-white");
             setOpenClass("hidden");
             setNavClass("flex z-[10000] flex-col fixed top-0 left-0 w-screen h-screen bg-white text-lg uppercase font-semibold items-center text-center");
-            isOpen = true;
+            setIsOpen(true);
         }
     }
 
