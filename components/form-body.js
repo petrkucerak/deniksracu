@@ -137,7 +137,7 @@ export default function FormBody() {
                     className="rounded-xl m-3 bg-yellow-500 w-full py-2 text-white font-bold uppercase hover:bg-yellow-600 duration-200"
                     onClick={() => {
                         let tags = bonusTags;
-                        Form2JSONToilet(tags);
+                        Form2JSONToilet(tags, "download");
                     }}
                 >
                     Stáhnout
@@ -146,8 +146,7 @@ export default function FormBody() {
                     className="rounded-xl m-3 w-full py-2 bg-yellow-500 text-white font-bold uppercase hover:bg-yellow-600 duration-200"
                     onClick={() => {
                         let tags = bonusTags;
-                        Form2JSONToilet(tags);
-                        toilet2github();
+                        Form2JSONToilet(tags, "request");
                     }}
                 >
                     Vytvořit request
