@@ -1,6 +1,7 @@
 name: 🚽 Zachodo Pridavka
 on:
-  workflow_dispatch:
+  repository_dispatch:
+    types: [toilet-adder]
 
 jobs:
   say_hello:
