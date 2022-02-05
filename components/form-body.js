@@ -7,6 +7,7 @@ import { useState } from "react";
 import FromToggleQuestion from "./form-toggle-question";
 import TagsInput from "react-tagsinput";
 import { Form2JSONToilet } from "../lib/toilet";
+import { toilet2github } from "../lib/toilet2github";
 
 export default function FormBody() {
 
@@ -146,6 +147,7 @@ export default function FormBody() {
                     onClick={() => {
                         let tags = bonusTags;
                         Form2JSONToilet(tags);
+                        toilet2github();
                     }}
                 >
                     Vytvořit request
