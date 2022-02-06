@@ -1,16 +1,20 @@
 name: 🚽 Zachodo Pridavka
 on:
-  repository_dispatch:
+  workflow_dispatch:
     inputs:
-      filename:
-        description: "File name, standart is timestamp"
+      name:
+        description: 'Person to greet'
         required: true
-      content:
-        description: "JSON content with all data"
-        reqiered: true
+        default: 'Mona the Octocat'
+      home:
+        description: 'location'
+        required: false
+        default: 'The Octoverse'
 
 jobs:
-  create-json:
+  say_hello:
     runs-on: ubuntu-latest
     steps:
-    - run: _toilets/$.json < $
+    - run: |
+        echo "Hello $!"
+        echo "- in $!"
