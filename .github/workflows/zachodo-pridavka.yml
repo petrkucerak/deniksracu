@@ -16,5 +16,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Hello $!"
-        echo "- in $!"
+        echo "Hello ${{ github.event.inputs.filename }}!"
+        echo "- in ${{ github.event.inputs.content }}!"
