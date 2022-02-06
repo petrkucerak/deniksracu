@@ -2,14 +2,14 @@ name: 🚽 Zachodo Pridavka
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: 'Person to greet'
+      filename:
+        description: '<filename>.json'
         required: true
-        default: 'Mona the Octocat'
-      home:
-        description: 'location'
-        required: false
-        default: 'The Octoverse'
+        default: 'null'
+      content:
+        description: 'the json file content'
+        required: true
+        default: ''
 
 jobs:
   say_hello:
