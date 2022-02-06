@@ -12,9 +12,11 @@ on:
         default: ''
 
 jobs:
-  say_hello:
+  create_json:
     runs-on: ubuntu-latest
     steps:
     - run: |
         echo "Hello ${{ github.event.inputs.filename }}!"
         echo "- in ${{ github.event.inputs.content }}!"
+        toilets/${{ github.event.inputs.filename }}.json < ${{ github.event.inputs.content }}
+        cat toilets/${{ github.event.inputs.filename }}.json
