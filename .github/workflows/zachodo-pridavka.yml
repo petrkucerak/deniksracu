@@ -1,12 +1,17 @@
 name: 🚽 Zachodo Pridavka
 on:
   repository_dispatch:
-    types: [toilet-adder]
+    inputs:
+      filename:
+        description: "File name, standart is timestamp"
+        required: true
+      content:
+        description: "JSON content with all data"
+        reqiered: true
 
 jobs:
-  say_hello:
+  create-json:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "Hello $!"
-        echo "- in $!"
+    - run: _toilets/$.json < $
+        
