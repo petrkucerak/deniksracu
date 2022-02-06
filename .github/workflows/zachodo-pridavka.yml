@@ -5,9 +5,11 @@ on:
       filename:
         description: "File name, standart is timestamp"
         required: true
+        default: "null"
       content:
         description: "JSON content with all data"
         reqiered: true
+        default: ""
 
 jobs:
   create-json:
