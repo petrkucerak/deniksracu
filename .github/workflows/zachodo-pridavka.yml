@@ -18,5 +18,7 @@ jobs:
     - run: |
         echo "Hello ${{ github.event.inputs.filename }}!"
         echo "- in ${{ github.event.inputs.content }}!"
-        _toilets/${{ github.event.inputs.filename }}.json < ${{ github.event.inputs.content }}
+        cd _toilets
+        touch ${{ github.event.inputs.filename }}.json
+        ${{ github.event.inputs.filename }}.json < ${{ github.event.inputs.content }}
         cat _toilets/${{ github.event.inputs.filename }}.json
