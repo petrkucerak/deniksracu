@@ -1,22 +1,12 @@
-import { MapConsumer, MapContainer, TileLayer } from "react-leaflet";
-import "leaflet-defaulticon-compatibility";
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-import "leaflet/dist/leaflet.css";
-import SracLocation from "../components/map-srac-location";
+import { Map, MarkerLayer, Marker } from "react-mapycz";
 
 export default function Map() {
   return (
-    <MapContainer
-      center={[50.08061, 14.4101822]}
-      zoom={10}
-      scrollWheelZoom={true}
-      className="w-screen h-screen"
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <SracLocation />
-    </MapContainer>
+    <Map center={{ lat: 55.604890000000005, lng: 8.97171 }}>
+      <MarkerLayer>
+        <Marker coords={{ lat: 55.60501000000001, lng: 8.97171 }} />
+        <Marker coords={{ lat: 55.547290000000004, lng: 8.897590000000001 }} />
+      </MarkerLayer>
+    </Map>
   );
 }
