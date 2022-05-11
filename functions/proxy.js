@@ -1,3 +1,3 @@
-export async function onRequestPost(context){
+export async function onRequest(context){
    return new Response(context);
 }
