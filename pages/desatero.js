@@ -4,12 +4,14 @@ import Section from "../components/section";
 import SectionHeader from "../components/section-header";
 import SectionBody from "../components/section-body";
 import LocalTitle from "../components/local-title";
+import BackButton from "../components/back-button";
 
 export default function Desatero() {
 
   return (
     <>
       <Meta />
+      <BackButton/>
       <h1 className="text-center text-4xl font-bold my-2">
         Sráčova desatero
       </h1>
