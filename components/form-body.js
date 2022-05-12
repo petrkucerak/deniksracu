@@ -1,4 +1,4 @@
-import FormLocalTitle from "./form-local-title";
+import LocalTitle from "./local-title";
 import Section from "./section";
 import SectionBody from "./section-body";
 import SectionHeader from "./section-header";
@@ -26,7 +26,7 @@ export default function FormBody() {
             <Section>
                 <SectionHeader title="Lokace" />
                 <SectionBody>
-                    <FormLocalTitle
+                    <LocalTitle
                         title="Souřadnice"
                         subtitle="Přesné místo každé svatyně sraní je třeba určit přesnými informacemi o poloze. Pokud jsi na místě, využij možnost automatického vyplnění."
                     />
@@ -54,7 +54,7 @@ export default function FormBody() {
                             />
                         </li>
                     </ul>
-                    <FormLocalTitle
+                    <LocalTitle
                         title="Název místa"
                         subtitle="Každý správný trůní sál musí mít i svůj název. To, jak ji pojmenuješ, je jenom na tobě. Pamatuj, že název by měl být jedinečný, originální a popisovat dané místo."
                     />
@@ -69,7 +69,7 @@ export default function FormBody() {
             <Section>
                 <SectionHeader title="Hodnocení" />
                 <SectionBody>
-                    <FormLocalTitle
+                    <LocalTitle
                         title="Hlavní kategorie"
                         subtitle="Vědeckým výzkumem jsme vyspecifikovali 5 hlavních základních kategorií, které u každého místa hodnotíme."
                     />
@@ -94,7 +94,7 @@ export default function FormBody() {
                         title="Jsou záchody zdarma?"
                         id="isFree"
                     />
-                    <FormLocalTitle
+                    <LocalTitle
                         title="Bonusové kategorie"
                         subtitle="Zaujalo tě na místních záchodech něco zajímavého? Pěkná hudba, inspirativní výhled, bezdrátové nabíječky či originální výzdoba? Neváhej a přidej speciální tagy."
                     />
@@ -104,7 +104,7 @@ export default function FormBody() {
                         maxTags={10}
                         inputProps={{ placeholder: "Přidej katogorii..." }}
                     />
-                    <FormLocalTitle
+                    <LocalTitle
                         title="Slovní komentář"
                         subtitle="Pro hodnocení ti nestačili výše zmíněné kategorie? Nevadí, všechno ostatní můžeš napsat sem!"
                     />
@@ -119,7 +119,7 @@ export default function FormBody() {
             <Section>
                 <SectionHeader title="Sráč" />
                 <SectionBody>
-                    <FormLocalTitle
+                    <LocalTitle
                         title="Přezdívka"
                         subtitle="Pokud se chceš zařadit do síně slávy a stát se legendárním sráčem, nezapomeň se podepsat pod své hodnocení."
                     />
