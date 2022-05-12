@@ -5,6 +5,7 @@ import SectionHeader from "../components/section-header";
 import SectionBody from "../components/section-body";
 import LocalTitle from "../components/local-title";
 import BackButton from "../components/back-button";
+import ReactAudioPlayer from "react-audio-player";
 
 export default function About() {
 
@@ -47,10 +48,11 @@ export default function About() {
         <SectionBody>
           <LocalTitle title="Píše se o nás" subtitle="" />
           <p>Krátká reportáž o našem projektu.</p>
-          <audio controls>
-            {/* <source src="assets/audio/DenikSracu_Uhnava.mp3" type="audio/mpeg"> */}
-              {/* Your browser does not support the audio element. */}
-          </audio>
+          <ReactAudioPlayer
+            src={`/asstes/audio/DenikSracu_Uhnava.mp3`}
+            controls
+            className="w-full"
+          />
         </SectionBody>
       </Section>
       <Footer />
