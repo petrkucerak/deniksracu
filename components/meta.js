@@ -8,10 +8,6 @@ export default function Meta() {
   return (
     <Head>
       <title>Deník sráčů</title>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.css"
-      />
 
       <meta name="application-name" content={title} />
       <meta name="apple-mobile-web-app-capable" content="yes" />
