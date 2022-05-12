@@ -49,7 +49,7 @@ export default function About() {
           <LocalTitle title="Píše se o nás" subtitle="" />
           <p>Krátká reportáž o našem projektu.</p>
           <ReactAudioPlayer
-            src={`/asstes/audio/DenikSracu_Uhnava.mp3`}
+            src={`/audio/DenikSracu_Uhnava.mp3`}
             controls
             className="w-full my-2"
           />
