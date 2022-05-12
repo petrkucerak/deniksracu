@@ -1,7 +1,7 @@
 import FormLocalTitle from "./form-local-title";
-import FormSection from "./form-section";
-import FormSectionBody from "./form-section-body";
-import FormSectionHeader from "./form-section-header";
+import Section from "./section";
+import SectionBody from "./section-body";
+import SectionHeader from "./section-header";
 import { sracLocation } from "../lib/srac-location";
 import { useState } from "react";
 import FromToggleQuestion from "./form-toggle-question";
@@ -23,9 +23,9 @@ export default function FormBody() {
 
     return (
         <main className="flex flex-col items-center">
-            <FormSection>
-                <FormSectionHeader title="Lokace" />
-                <FormSectionBody>
+            <Section>
+                <SectionHeader title="Lokace" />
+                <SectionBody>
                     <FormLocalTitle
                         title="Souřadnice"
                         subtitle="Přesné místo každé svatyně sraní je třeba určit přesnými informacemi o poloze. Pokud jsi na místě, využij možnost automatického vyplnění."
@@ -64,11 +64,11 @@ export default function FormBody() {
                         defaultValue="např. Hospůdka Pod Zelenou lípou"
                         id="placeName"
                     />
-                </FormSectionBody>
-            </FormSection>
-            <FormSection>
-                <FormSectionHeader title="Hodnocení" />
-                <FormSectionBody>
+                </SectionBody>
+            </Section>
+            <Section>
+                <SectionHeader title="Hodnocení" />
+                <SectionBody>
                     <FormLocalTitle
                         title="Hlavní kategorie"
                         subtitle="Vědeckým výzkumem jsme vyspecifikovali 5 hlavních základních kategorií, které u každého místa hodnotíme."
@@ -114,11 +114,11 @@ export default function FormBody() {
                         id="comment"
                     >
                     </textarea>
-                </FormSectionBody>
-            </FormSection>
-            <FormSection>
-                <FormSectionHeader title="Sráč" />
-                <FormSectionBody>
+                </SectionBody>
+            </Section>
+            <Section>
+                <SectionHeader title="Sráč" />
+                <SectionBody>
                     <FormLocalTitle
                         title="Přezdívka"
                         subtitle="Pokud se chceš zařadit do síně slávy a stát se legendárním sráčem, nezapomeň se podepsat pod své hodnocení."
@@ -129,8 +129,8 @@ export default function FormBody() {
                         defaultValue="Tvoje přezdívka ...."
                         id="nickName"
                     />
-                </FormSectionBody>
-            </FormSection>
+                </SectionBody>
+            </Section>
             <div className="flex w-full flex-row justify-center max-w-screen-md px-5 mb-8">
                 <button
                     className="rounded-xl m-3 bg-yellow-500 w-full py-2 text-white font-bold uppercase hover:bg-yellow-600 duration-200"

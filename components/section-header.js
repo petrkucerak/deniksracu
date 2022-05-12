@@ -1,4 +1,4 @@
-export default function FormSectionHeader({ title }) {
+export default function SectionHeader({ title }) {
     return (
         <h2
             id={title}

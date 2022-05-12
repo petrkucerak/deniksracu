@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import FormBody from "../components/form-body";
 
-export default function Form() {
+export default function About() {
 
   return (
     <>
