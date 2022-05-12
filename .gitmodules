@@ -1,0 +1,3 @@
+[submodule "deniksracu-proxy"]
+	path = deniksracu-proxy
+	url = git@github.com:petrkucerak/deniksracu-proxy.git
