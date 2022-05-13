@@ -16,6 +16,9 @@
 # production
 /build
 
+# build toilets
+/toilets
+
 # misc
 .DS_Store
 *.pem
