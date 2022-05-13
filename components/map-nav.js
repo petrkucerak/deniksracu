@@ -38,8 +38,8 @@ export default function MapNav() {
                 <Link href="/about">
                     <a id="about" className="mt-5" >O projektu</a>
                 </Link>
-                <Link href="/about">
-                    <a id="rules" className="mt-5" >Sráčovo desatero</a>
+                <Link href="/desatero">
+                    <a id="desatero" className="mt-5" >Sráčovo desatero</a>
                 </Link>
             </nav>
         </>
