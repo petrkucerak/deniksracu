@@ -1,7 +1,7 @@
 import { useMap } from "react-leaflet";
 import { locate } from "leaflet.locatecontrol"; // used, not removes
 
-export default function SracLocation() {
+export default function MapSracLocation() {
   const map = useMap();
   L.control
     .locate({
