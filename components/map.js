@@ -3,7 +3,6 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
 import MapSracLocation from "../components/map-srac-location";
-import AutoLocate from "./auto-locate";
 
 export default function Map() {
   return (
@@ -22,7 +21,6 @@ export default function Map() {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.css"
       />
-      <AutoLocate/>
     </MapContainer>
   );
 }
