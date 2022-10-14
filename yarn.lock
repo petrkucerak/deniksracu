@@ -38,6 +38,11 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@cloudflare/pages-plugin-static-forms@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/pages-plugin-static-forms/-/pages-plugin-static-forms-1.0.0.tgz#8e3bb26bd5ac273928ca3a4656027f490def0faa"
+  integrity sha512-NMM8BUKU2VUwv0ZdPz6XaMeY0uVSWiAwvV4iIdaCh9a+utfgQ/RmeicxwkuA6/l5RQbs48XPSjnEoWpsBbyfgw==
+
 "@esbuild-plugins/node-globals-polyfill@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@esbuild-plugins/node-globals-polyfill/-/node-globals-polyfill-0.1.1.tgz#a313ab3efbb2c17c8ce376aa216c627c9b40f9d7"
