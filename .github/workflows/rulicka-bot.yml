@@ -43,7 +43,9 @@ jobs:
           New toilet 
           - name: ${{ github.event.inputs.title }}
           - filename: ${{ github.event.inputs.filename }}.json
-
+          ```json
+          ${{ github.event.inputs.content }}
+          ```
         labels: |
           toilet
         reviewers: petrkucerak
