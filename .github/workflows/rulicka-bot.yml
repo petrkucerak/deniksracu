@@ -1,4 +1,4 @@
-name: 🧻 Rulička bot [🚽➕]
+name: 🧻 Rulička bot
 on:
   workflow_dispatch:
     inputs:
