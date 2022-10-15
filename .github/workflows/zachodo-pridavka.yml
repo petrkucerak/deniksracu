@@ -22,15 +22,16 @@ jobs:
         echo '${{ github.event.inputs.content }}' > ${{ github.event.inputs.filename }}.json
         cat ${{ github.event.inputs.filename }}.json
         
-    - uses: stefanzweifel/git-auto-commit-action@v4
+    - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
       with:
-        commit_message: Add ${{ github.event.inputs.filename }}.json toilet
-        branch: toilets-for-approve
+        add: '*'
+        author_name: Rulička[bot]
+        author_email: rulicka@deniksracu.cz
+        committer_name: Rulička[bot]
+        committer_email: rulicka@deniksracu.cz
+        message: 'Add ${{ github.event.inputs.filename }}.json toilet'
+        new_branch: toilets-for-approve
 
-        # Optional commit user and author settings
-        commit_user_name: Rulicka Bot
-        commit_user_email: rulicka@deniksracu.cz
-        commit_author: Rulica <rulicka@deniksracu.cz>
-
-        # Optional. Create given branch name in local and remote repository.
-        create_branch: true
+        # Arguments for the git pull command. By default, the action does not pull.
+        # Default: ''
+        pull: '--rebase --autostash ...'
