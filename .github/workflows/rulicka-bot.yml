@@ -38,7 +38,7 @@ jobs:
         signoff: false
         branch: new-toilet-${{ github.event.inputs.filename }}
         delete-branch: true
-        title: 'New Toilet request:  ${{ github.event.inputs.title }}'
+        title: 'A new toilet request:  ${{ github.event.inputs.title }}'
         body: |
           New toilet 
           - name: ${{ github.event.inputs.title }}
