@@ -25,7 +25,7 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Add ${{ github.event.inputs.filename }}.json toilet
-        branch: toilets-for-approve
+        branch: new-toilet-${{ github.event.inputs.filename }}
 
         # Optional commit user and author settings
         commit_user_name: Rulicka Bot
