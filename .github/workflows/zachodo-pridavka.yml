@@ -15,10 +15,23 @@ jobs:
   create_json:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
+    
     - run: |
-        echo "Hello ${{ github.event.inputs.filename }}!"
-        echo "- in ${{ github.event.inputs.content }}!"
         cd _toilets
         touch ${{ github.event.inputs.filename }}.json
         ${{ github.event.inputs.filename }}.json < ${{ github.event.inputs.content }}
         cat _toilets/${{ github.event.inputs.filename }}.json
+        
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Add ${{ github.event.inputs.filename }}.json toilet
+        branch: toilets-for-approve
+
+        # Optional commit user and author settings
+        commit_user_name: Rulicka Bot
+        commit_user_email: rulicka@deniksracu.cz
+        commit_author: Rulica <rulicka@deniksracu.cz>
+
+        # Optional. Create given branch name in local and remote repository.
+        create_branch: true
