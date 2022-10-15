@@ -3,17 +3,17 @@ on:
   workflow_dispatch:
     inputs:
       filename:
-        description: '<filename>.json'
+        description: 'Filename (without extension)'
         required: true
-        default: '1665762044825'
+        default: ''
       content:
-        description: 'the json file content'
+        description: 'Content (JSON data)'
         required: true
-        default: '{"latitude":"50.044601","longtitude":"15.822726","placeName":"U pípy","isClean":false,"hasPaper":false,"canLock":true,"hasWater":false,"isFree":true,"bonusCategory":[],"comment":"","nickName":"","timeStamp":"2022-10-14T15:40:44.825Z"}'
+        default: ''
       title:
-        description: 'Pub or restaurant title'
+        description: 'Business name'
         required: true
-        default: 'Pod Pařezem'
+        default: ''
 
 jobs:
   create_json:
