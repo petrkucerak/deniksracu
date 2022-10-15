@@ -33,8 +33,8 @@ jobs:
       with:
         token: ${{ secrets.PAT }}
         commit-message: Add ${{ github.event.inputs.filename }}.json toilet 
-        #committer: Rulicka [Bot] <rulicka@deniksracu.cz>
-        #author: Rulica <rulicka@deniksracu.cz>
+        committer: Rulicka [Bot] <rulicka@deniksracu.cz>
+        author: Rulica <rulicka@deniksracu.cz>
         signoff: false
         branch: new-toilet-${{ github.event.inputs.filename }}
         delete-branch: true
