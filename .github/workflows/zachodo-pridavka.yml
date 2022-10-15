@@ -19,7 +19,7 @@ jobs:
     
     - run: |
         cd _toilets
-        echo ${{ github.event.inputs.content }} > ${{ github.event.inputs.filename }}.json
+        echo '${{ github.event.inputs.content }}' > ${{ github.event.inputs.filename }}.json
         cat ${{ github.event.inputs.filename }}.json
         
     - uses: stefanzweifel/git-auto-commit-action@v4
