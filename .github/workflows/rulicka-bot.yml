@@ -1,4 +1,4 @@
-name: 🧻 Kulička bot [🚽➕]
+name: 🧻 Rulička bot [🚽➕]
 on:
   workflow_dispatch:
     inputs:
@@ -10,6 +10,10 @@ on:
         description: 'the json file content'
         required: true
         default: '{"latitude":"50.044601","longtitude":"15.822726","placeName":"U pípy","isClean":false,"hasPaper":false,"canLock":true,"hasWater":false,"isFree":true,"bonusCategory":[],"comment":"","nickName":"","timeStamp":"2022-10-14T15:40:44.825Z"}'
+      title:
+        description: 'Pub or restaurant title'
+        required: true
+        default: 'Pod Pařezem'
 
 jobs:
   create_json:
@@ -22,15 +26,22 @@ jobs:
         echo '${{ github.event.inputs.content }}' > ${{ github.event.inputs.filename }}.json
         cat ${{ github.event.inputs.filename }}.json
         
-    - uses: stefanzweifel/git-auto-commit-action@v4
+    - uses: peter-evans/create-pull-request@v4
       with:
-        commit_message: Add ${{ github.event.inputs.filename }}.json toilet
+        token: ${{ secrets.PAT }}
+        commit-message: Add ${{ github.event.inputs.filename }}.json toilet 
+        committer: Rulicka [Bot] <rulicka@deniksracu.cz>
+        author: Rulica <rulicka@deniksracu.cz>
+        signoff: false
         branch: new-toilet-${{ github.event.inputs.filename }}
+        delete-branch: true
+        title: 'New Toilet request:  ${{ github.event.inputs.title }}'
+        body: |
+          New toilet 
+          - name: ${{ github.event.inputs.title }}
+          - filename: ${{ github.event.inputs.filename }}.json
 
-        # Optional commit user and author settings
-        commit_user_name: Rulicka Bot
-        commit_user_email: rulicka@deniksracu.cz
-        commit_author: Rulica <rulicka@deniksracu.cz>
-
-        # Optional. Create given branch name in local and remote repository.
-        create_branch: true
+        labels: |
+          toilet
+        reviewers: petrkucerak
+        draft: false
