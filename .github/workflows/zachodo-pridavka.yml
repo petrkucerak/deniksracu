@@ -5,11 +5,11 @@ on:
       filename:
         description: '<filename>.json'
         required: true
-        default: 'null'
+        default: '1665762044825'
       content:
         description: 'the json file content'
         required: true
-        default: ''
+        default: '{"latitude":"50.044601","longtitude":"15.822726","placeName":"U pípy","isClean":false,"hasPaper":false,"canLock":true,"hasWater":false,"isFree":true,"bonusCategory":[],"comment":"","nickName":"","timeStamp":"2022-10-14T15:40:44.825Z"}'
 
 jobs:
   create_json:
@@ -19,9 +19,8 @@ jobs:
     
     - run: |
         cd _toilets
-        touch ${{ github.event.inputs.filename }}.json
-        ${{ github.event.inputs.filename }}.json < ${{ github.event.inputs.content }}
-        cat _toilets/${{ github.event.inputs.filename }}.json
+        echo ${{ github.event.inputs.content }} > ${{ github.event.inputs.filename }}.json
+        cat ${{ github.event.inputs.filename }}.json
         
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
