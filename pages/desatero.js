@@ -18,7 +18,7 @@ export default function Desatero() {
       <Section>
         <SectionHeader title="přikázání" />
         <SectionBody>
-          <LocalTitle title="Prolog" subtitle="Jsou dny, kdy se všechno otáčí jako dobře promazaný držák na toaletní papír. Těmito dny proplouváš bez většího problému. Pak se ale stane, že ani v klidu nevysereš. Nestíháš, jsi rozhádaný, zkolí tě nemoc, nepovedla se ti zkouška a tvoje oáza už není klidnou. Právě pro tyto dny slouží desatero, které ti ukáže cestu skrz temný tunel. Díky němu se neztratíš a budeš se držet základních zásad, které z tebe dělají správného sráče." />
+          <LocalTitle title="Prolog" subtitle="Jsou dny, kdy se všechno otáčí jako dobře promazaný držák na toaletní papír. Těmito dny proplouváš bez většího problému. Pak se ale stane, že se ani v klidu nevysereš. Nestíháš, jsi rozhádaný, zkolí tě nemoc, nepovedla se ti zkouška a tvoje oáza už není klidnou. Právě pro tyto dny slouží desatero, které ti ukáže cestu skrz temný tunel. Díky němu se neztratíš a budeš se držet základních zásad, které z tebe dělají správného sráče." />
           <LocalTitle title="Přikázání" subtitle="" />
           <ol className="list-decimal ml-8">
             <li className="mb-2">Do jednoho záchodu sráti budeš!</li>
