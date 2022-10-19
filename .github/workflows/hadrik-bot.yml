@@ -13,5 +13,6 @@ jobs:
       
       - name: Print hello world
         run: |
-          echo 'Hello'
+          cd public\asstes
+          convert logo.png -resize 96x96 logo.png
           echo 'World'
