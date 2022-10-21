@@ -6,6 +6,7 @@ export default function Meta() {
   const title = "Deník sráčů";
   const keywords =
     "Deník sráčů, záchod, toalety, WC, položit kabel, saulit, trůnění, sráč";
+  const mainColor = `af8566ff`;
   const url = "https://deniksracu.cz/";
   return (
     <Head>
@@ -16,6 +17,8 @@ export default function Meta() {
         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
       />
 
+      <link rel="manifest" href="/manifest.json" />
+
       <meta name="application-name" content={title} />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -25,9 +28,7 @@ export default function Meta() {
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-tap-highlight" content="no" />
-      <meta name="theme-color" content="#fbbf24" />
-
-      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content={mainColor} />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:url" content={url} />
@@ -40,9 +41,6 @@ export default function Meta() {
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={title} />
       <meta property="og:url" content={url} />
-
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <meta name="msapplication-TileColor" content="#000000" />
 
       <meta name="robots" content="all" />
     </Head>
