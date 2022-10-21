@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "favicon": "pwa-asset-generator --favicon --mstile --xhtml ./public/asstes/logo.svg public/favicon"
+    "lint": "next lint"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
@@ -18,7 +17,6 @@
     "next": "latest",
     "next-pwa": "^5.5.2",
     "postcss": "^8.2.4",
-    "pwa-asset-generator": "^6.2.0",
     "react": "17.0.2",
     "react-audio-player": "^0.17.0",
     "react-dom": "17.0.2",
