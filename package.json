@@ -4,10 +4,11 @@
   "version": "2.0.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node -e 'require(\"./jsons2json\").jsons2json()' && next build",
     "start": "next start",
     "lint": "next lint",
-    "jsons2json": "node -e 'require(\"./jsons2json\").jsons2json()'"
+    "jsons2json": "node -e 'require(\"./jsons2json\").jsons2json()'",
+    "CFbuild": "node -e 'require(\"./jsons2json\").jsons2json()' && next build && next export"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
