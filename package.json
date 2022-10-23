@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "jsons2json": "node -e 'require(\"./jsons2json\").jsons2json()'"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
