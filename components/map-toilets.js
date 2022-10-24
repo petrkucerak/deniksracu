@@ -22,7 +22,7 @@ export default function MapToilets() {
 
 const toiletIcon = L.icon({
   iconUrl: "/asstes/icons/marker-toilet-48x84-transparent.png",
-  iconSize: [48, 84],
-  iconAnchor: [22, 94],
-  popupAnchor: [-3, -76],
+  iconSize: [24, 42],
+  iconAnchor: [0, 0],
+  popupAnchor: [0, 0],
 });
