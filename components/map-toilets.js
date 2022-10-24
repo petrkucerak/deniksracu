@@ -1,6 +1,6 @@
 import { useMap } from "react-leaflet";
 
-const url = `public/toilets/toilets-unsorted.json`;
+const url = `https://raw.githubusercontent.com/petrkucerak/deniksracu/display-toilets/public/toilets/toilets-unsorted.json`;
 
 export default function MapToilets() {
   const map = useMap();
@@ -8,11 +8,11 @@ export default function MapToilets() {
   fetch(url)
     .then((res) => res.json())
     .then((toilets) => {
-      console.log(toilets);
+      for(let id = 0; id < toilets.length; id+=1){
+        console.log(toilets[id]);
+      }
     })
     .catch((err) => console.log(err));
-
-  console.log("Map functions!");
 
   return null;
 }
