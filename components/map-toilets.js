@@ -25,4 +25,7 @@ const toiletIcon = L.icon({
   iconSize: [24, 42],
   iconAnchor: [0, 0],
   popupAnchor: [0, 0],
+  shadowUrl: "/asstes/icons/marker-toilet-48x84-transparent-shadows.svg",
+  shadowSize: [28.79, 50.4],
+  shadowAnchor: [2.3945, 4.19999],
 });
