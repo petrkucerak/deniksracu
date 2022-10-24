@@ -1,6 +1,6 @@
 import { useMap } from "react-leaflet";
 
-const url = `https://raw.githubusercontent.com/petrkucerak/deniksracu/display-toilets/public/toilets/toilets-unsorted.json`;
+const url = `/toilets/toilets-unsorted.json`;
 
 export default function MapToilets() {
   const map = useMap();
@@ -21,11 +21,8 @@ export default function MapToilets() {
 }
 
 const toiletIcon = L.icon({
-  iconUrl: "my-icon.png",
-  iconSize: [38, 95],
+  iconUrl: "/asstes/icons/marker-toilet-48x84-transparent.png",
+  iconSize: [48, 84],
   iconAnchor: [22, 94],
   popupAnchor: [-3, -76],
-  shadowUrl: "my-icon-shadow.png",
-  shadowSize: [68, 95],
-  shadowAnchor: [22, 94],
 });
