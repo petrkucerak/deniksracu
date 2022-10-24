@@ -9,10 +9,26 @@ export default function MapToilets() {
     .then((res) => res.json())
     .then((toilets) => {
       for (let id = 0; id < toilets.length; id += 1) {
-        console.log(toilets[id]);
+        const toiletPopup = L.popup({
+          keepInView: true,
+          closeButton: false,
+          className: "",
+        }).setContent(`
+          <div class="text-lg">
+            <h2 class="text-2xl font-semibold">${toilets[id].placeName}</h2>
+            <span class="font-mono text-base">${toilets[id].latitude}; ${toilets[id].longtitude}</span>
+            <div>
+              ${toilets[id].bonusCategory}
+            </div>
+            <p>${toilets[id].comment}<p>
+          </div>
+        `);
+
         L.marker([toilets[id].latitude, toilets[id].longtitude], {
           icon: toiletIcon,
-        }).addTo(map);
+        })
+          .addTo(map)
+          .bindPopup(toiletPopup);
       }
     })
     .catch((err) => console.log(err));
