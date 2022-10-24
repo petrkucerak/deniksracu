@@ -3,7 +3,7 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
 import SracLocation from "../components/map-srac-location";
-import MapToilets from "./map-toilets";
+import MapToilets from "../components/map-toilets";
 
 export default function Map() {
   return (
