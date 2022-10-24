@@ -1,6 +1,6 @@
 # CUSTOM
 tmp.txt
-public/toilets/*.json
+#public/toilets/*.json
 
 # dependencies
 /node_modules
