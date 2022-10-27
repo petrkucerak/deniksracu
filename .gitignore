@@ -1,6 +1,9 @@
 # CUSTOM
 tmp.txt
 public/toilets/*.json
+robots.txt
+sitemap-0.xml
+sitemap.xml
 
 # dependencies
 /node_modules

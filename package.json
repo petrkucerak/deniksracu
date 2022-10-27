@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "jsons2json": "node -e 'require(\"./jsons2json\").jsons2json()'",
-    "CFbuild": "node -e 'require(\"./jsons2json\").jsons2json()' && next build && next export"
+    "CFbuild": "node -e 'require(\"./jsons2json\").jsons2json()' && next build && next-sitemap && next export"
   },
   "dependencies": {
     "@tabler/icons": "^1.56.0",
@@ -19,6 +19,7 @@
     "leaflet.locatecontrol": "^0.76.0",
     "next": "latest",
     "next-pwa": "^5.5.2",
+    "next-sitemap": "^3.1.29",
     "postcss": "^8.2.4",
     "react": "17.0.2",
     "react-audio-player": "^0.17.0",
