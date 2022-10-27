@@ -11,6 +11,7 @@
     "CFbuild": "node -e 'require(\"./jsons2json\").jsons2json()' && next build && next export"
   },
   "dependencies": {
+    "@tabler/icons": "^1.56.0",
     "@tailwindcss/forms": "^0.4.0",
     "autoprefixer": "^10.4.2",
     "leaflet": "^1.7.1",
