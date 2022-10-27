@@ -63,6 +63,18 @@
   @apply border-0 bg-transparent w-full;
 }
 
+.srac-zelenac {
+  @apply text-green-600;
+}
+.srac{
+  @apply text-blue-600;
+}
+.srac-mazak{
+  @apply text-pink-600 text-lg;
+}
+.velesrac{
+  @apply text-[#af8566ff] font-semibold text-xl;
+}
 /* End of the tagsinput */
 
 /* Write you own custom component styles here */

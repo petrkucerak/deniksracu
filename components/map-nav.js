@@ -57,6 +57,11 @@ export default function MapNav() {
             Sráčovo desatero
           </a>
         </Link>
+        <Link href="/hall">
+          <a id="hall" className="mt-5">
+            Síň sráčů
+          </a>
+        </Link>
       </nav>
     </>
   );
