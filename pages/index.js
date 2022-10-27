@@ -13,7 +13,6 @@ export default function Home() {
           <MapSSR />
         </div>
       </main>
-      <footer></footer>
     </>
   );
 }
