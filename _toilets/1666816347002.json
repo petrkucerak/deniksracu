@@ -1,1 +1,16 @@
-{"latitude":"50.0792333","longtitude":"14.4192796","placeName":"Restaurace u Kotvy","isClean":false,"hasPaper":true,"canLock":false,"hasWater":true,"isFree":true,"bonusCategory":[],"comment":"V restauraci točí přijatelně Krušovice 11 nefiltr za 42,-Kč. ","nickName":"Pedro","timeStamp":"2022-10-26T20:32:27.002Z"}
+{
+  "latitude": "50.0792333",
+  "longtitude": "14.4192796",
+  "placeName": "Restaurace u Kotvy",
+  "wayDescription": "Na toaletu se lze dostat průchodem při skrze pasáž, která se nachzí napravo od vchodových dveří.",
+  "toiletType": "hospoda, restarace, ...",
+  "isClean": false,
+  "hasPaper": true,
+  "canLock": false,
+  "hasWater": true,
+  "isFree": true,
+  "bonusCategory": [],
+  "comment": "V restauraci točí přijatelně Krušovice 11 nefiltr za 42,-Kč. ",
+  "nickName": "Pedro",
+  "timeStamp": "2022-10-26T20:32:27.002Z"
+}

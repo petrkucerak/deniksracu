@@ -1,1 +1,16 @@
-{"latitude":"50.0876256","longtitude":"14.4034947","placeName":"Restaurace U Glaubiců","isClean":true,"hasPaper":true,"canLock":true,"hasWater":true,"isFree":true,"bonusCategory":["levné pivo"],"comment":"Plzeň za 37,90 Kč. ","nickName":"Pedro","timeStamp":"2022-10-15T19:47:51.511Z"}
+{
+  "latitude": "50.0876256",
+  "longtitude": "14.4034947",
+  "placeName": "Restaurace U Glaubiců",
+  "wayDescription": "",
+  "toiletType": "hospoda, restarace, ...",
+  "isClean": true,
+  "hasPaper": true,
+  "canLock": true,
+  "hasWater": true,
+  "isFree": true,
+  "bonusCategory": ["levné pivo"],
+  "comment": "Plzeň za 37,90 Kč. ",
+  "nickName": "Pedro",
+  "timeStamp": "2022-10-15T19:47:51.511Z"
+}
