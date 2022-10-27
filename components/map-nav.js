@@ -1,6 +1,6 @@
-import { X, Menu } from "react-feather";
 import Link from "next/link";
 import { useState } from "react";
+import { IconMenu2, IconX } from "@tabler/icons";
 
 export default function MapNav() {
   const [closeClass, setCloseClass] = useState("hidden");
@@ -33,10 +33,10 @@ export default function MapNav() {
   return (
     <>
       <button className={closeClass} onClick={() => switchMenuContext()}>
-        <X />
+        <IconX/>
       </button>
       <button className={openClass} onClick={() => switchMenuContext()}>
-        <Menu />
+        <IconMenu2/>
       </button>
       <nav className={navClass}>
         <h1 className="mt-5 font-bold text-2xl normal-case border-b-2 border-gray-600">
