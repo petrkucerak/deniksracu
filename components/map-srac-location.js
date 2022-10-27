@@ -3,14 +3,18 @@ import { locate } from "leaflet.locatecontrol";
 
 export default function SracLocation() {
   const map = useMap();
-  L.control
+  const locateControl = L.control
     .locate({
-      flyTo: true,
+      flyTo: false,
       showPopup: false,
       strings: {
         title: "Ukaž mi, kde jsem!",
       },
+      locateOptions: {
+        enableHighAccuracy: true,
+      },
     })
     .addTo(map);
+  locateControl.start();
   return null;
 }
