@@ -7,9 +7,8 @@
     "build": "node -e 'require(\"./jsons2json\").jsons2json()' && next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap",
     "jsons2json": "node -e 'require(\"./jsons2json\").jsons2json()'",
-    "CFbuild": "node -e 'require(\"./jsons2json\").jsons2json()' && next build && next export"
+    "CFbuild": "node -e 'require(\"./jsons2json\").jsons2json()' && next build && next-sitemap && next export"
   },
   "dependencies": {
     "@tabler/icons": "^1.56.0",
