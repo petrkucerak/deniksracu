@@ -31,7 +31,7 @@ export default function FormBody() {
           />
           <button
             onClick={() => setSracLocation()}
-            className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500 duration-200"
+            className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500"
           >
             získat polohu
           </button>

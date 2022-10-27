@@ -9,20 +9,67 @@ export default function MapToilets() {
     .then((res) => res.json())
     .then((toilets) => {
       for (let id = 0; id < toilets.length; id += 1) {
+        
+        // prepare the category string
+        let category = `<ul class="">`;
+        if (toilets[id].isClean) category += "<li>čisto</li>";
+        if (toilets[id].hasPaper) category += "<li>toaleťák</li>";
+        if (toilets[id].canLock) category += "<li>zamykatelné</li>";
+        if (toilets[id].hasWater) category += "<li>tekoucí voda</li>";
+        if (toilets[id].isFree) category += "<li>zdarma</li>";
+        for (let i = 0; i < toilets[id].bonusCategory.length; i += 1) {
+          category += `<li>${toilets[id].bonusCategory[i]}</li>`;
+        }
+        category += "</ul>";
+
+        // prepare the way description string
+        let wayDescriptionString = "";
+        if(toilets[id].wayDescription !== "") wayDescriptionString = `
+        <div>
+          <h3 class="text-xl font-semibold mt-2">Jak se na místo dostat</h3>
+          <p class="!my-0">${toilets[id].wayDescription}<p>
+        </div>
+        `;
+
+        // prepare the comment string
+        let commentString = "";
+        if(toilets[id].comment !== "") commentString = `
+        <div>
+          <h3 class="text-xl font-semibold mt-2">Komentář</h3>
+          <p class="!my-0">${toilets[id].comment}<p>
+        </div>
+        `;
+
+        //prepare date string
+        let date = new Date(toilets[id].timeStamp);
+        const dateString = `${date.getDate()}. ${
+          date.getMonth() + 1
+        }. ${date.getFullYear()} v ${date.getHours()}:${date.getMinutes()}`;
+
+        // prepare the output string
+        const string = `
+          <div class="text-lg">
+            <h2 class="text-2xl font-semibold">${toilets[id].placeName}</h2>
+            
+            <div class="font-mono text-base">
+              <span>${toilets[id].latitude}</span>
+              <span>${toilets[id].longtitude}</span>
+            </div>
+            
+            <span>${toilets[id].toiletType}</span>
+            ${category}
+            ${wayDescriptionString}
+            ${commentString}
+            <p class="text-base">${dateString} přidal ${toilets[id].nickName}<p>
+          </div>
+        `;
+
+        // render card
         const toiletPopup = L.popup({
           keepInView: true,
           closeButton: false,
           className: "",
-        }).setContent(`
-          <div class="text-lg">
-            <h2 class="text-2xl font-semibold">${toilets[id].placeName}</h2>
-            <span class="font-mono text-base">${toilets[id].latitude}; ${toilets[id].longtitude}</span>
-            <div>
-              ${toilets[id].bonusCategory}
-            </div>
-            <p>${toilets[id].comment}<p>
-          </div>
-        `);
+        }).setContent(string);
 
         L.marker([toilets[id].latitude, toilets[id].longtitude], {
           icon: toiletIcon,

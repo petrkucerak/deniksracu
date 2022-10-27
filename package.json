@@ -11,6 +11,7 @@
     "CFbuild": "node -e 'require(\"./jsons2json\").jsons2json()' && next build && next export"
   },
   "dependencies": {
+    "@tabler/icons": "^1.56.0",
     "@tailwindcss/forms": "^0.4.0",
     "autoprefixer": "^10.4.2",
     "leaflet": "^1.7.1",
@@ -22,7 +23,6 @@
     "react": "17.0.2",
     "react-audio-player": "^0.17.0",
     "react-dom": "17.0.2",
-    "react-feather": "^2.0.9",
     "react-leaflet": "^3.2.5",
     "react-tagsinput": "^3.19.0",
     "sweetalert2": "^11.3.10",
