@@ -69,6 +69,30 @@ export default function FormBody() {
             id="placeName"
             placeholder="např. Hospůdka Pod Zelenou lípou"
           />
+          <LocalTitle
+            title="Typ toalety"
+            subtitle="Nachází se trůn v hospodě, na úřadě nebo se snad jedná o veřejnou toaletu? Podle tvojí volby se přiřadí konkrétní ikonka."
+          />
+          <select
+            id="toiletType"
+            className="rounded border-0 text-gray-600 outline-none w-full mb-8"
+          >
+            <option>hospoda, restarace, ...</option>
+            <option>nákupní středisko</option>
+            <option>veřejné toalety</option>
+            <option>škola</option>
+            <option>úřad, banka, ...</option>
+            <option>jiné</option>
+          </select>
+          <LocalTitle
+            title="Pospis cesty"
+            subtitle="Časovou tíseň při hledání království pro sraní zažil určitě každý. Prosím popiš, kde se trůn nachází, patro, dveře, jaké heslo říci na recepci, ..."
+          />
+          <textarea
+            className="rounded border-0 h-20 text-gray-600"
+            id="wayDescription"
+            placeholder="např. Na toaletu se lze dostat průchodem při skrze pasáž, která se nachzí napravo od vchodových dveří ..."
+          ></textarea>
         </SectionBody>
       </Section>
       <Section>
