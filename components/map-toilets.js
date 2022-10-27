@@ -9,21 +9,39 @@ export default function MapToilets() {
     .then((res) => res.json())
     .then((toilets) => {
       for (let id = 0; id < toilets.length; id += 1) {
-        // prepare hte category string
-        let category = "<div>";
-        if (toilets[id].isClean) category += "<span>čisto</span>";
-        if (toilets[id].hasPaper) category += "<span>toaleťák</span>";
-        if (toilets[id].canLock) category += "<span>zamykatelné</span>";
-        if (toilets[id].hasWater) category += "<span>tekoucí voda</span>";
-        if (toilets[id].isFree) category += "<span>zdarma</span>";
+        
+        // prepare the category string
+        let category = `<ul class="">`;
+        if (toilets[id].isClean) category += "<li>čisto</li>";
+        if (toilets[id].hasPaper) category += "<li>toaleťák</li>";
+        if (toilets[id].canLock) category += "<li>zamykatelné</li>";
+        if (toilets[id].hasWater) category += "<li>tekoucí voda</li>";
+        if (toilets[id].isFree) category += "<li>zdarma</li>";
         for (let i = 0; i < toilets[id].bonusCategory.length; i += 1) {
-          category += `<span>${toilets[id].bonusCategory[i]}</span>`;
+          category += `<li>${toilets[id].bonusCategory[i]}</li>`;
         }
-        category += "</div>";
+        category += "</ul>";
+
+        // prepare the way description string
+        let wayDescriptionString = "";
+        if(toilets[id].wayDescription !== "") wayDescriptionString = `
+        <div>
+          <h3 class="text-xl font-semibold mt-2">Jak se na místo dostat</h3>
+          <p class="!my-0">${toilets[id].wayDescription}<p>
+        </div>
+        `;
+
+        // prepare the comment string
+        let commentString = "";
+        if(toilets[id].comment !== "") commentString = `
+        <div>
+          <h3 class="text-xl font-semibold mt-2">Komentář</h3>
+          <p class="!my-0">${toilets[id].comment}<p>
+        </div>
+        `;
 
         //prepare date string
         let date = new Date(toilets[id].timeStamp);
-        console.log(date);
         const dateString = `${date.getDate()}. ${
           date.getMonth() + 1
         }. ${date.getFullYear()} v ${date.getHours()}:${date.getMinutes()}`;
@@ -32,12 +50,17 @@ export default function MapToilets() {
         const string = `
           <div class="text-lg">
             <h2 class="text-2xl font-semibold">${toilets[id].placeName}</h2>
-            <span class="font-mono text-base">${toilets[id].latitude}; ${toilets[id].longtitude}</span>
+            
+            <div class="font-mono text-base">
+              <span>${toilets[id].latitude}</span>
+              <span>${toilets[id].longtitude}</span>
+            </div>
+            
             <span>${toilets[id].toiletType}</span>
             ${category}
-            <p>${toilets[id].wayDescription}<p>
-            <p>${toilets[id].comment}<p>
-            <p>${dateString} přidal ${toilets[id].nickName}<p>
+            ${wayDescriptionString}
+            ${commentString}
+            <p class="text-base">${dateString} přidal ${toilets[id].nickName}<p>
           </div>
         `;
 
