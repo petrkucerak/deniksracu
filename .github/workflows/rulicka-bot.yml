@@ -14,8 +14,6 @@ on:
         description: 'Business name'
         required: true
         default: ''
-env:
-  ContentJSON: fromJSON(github.event.inputs.content)
 
 jobs:
   create_json:
@@ -31,6 +29,8 @@ jobs:
         cat ${{ github.event.inputs.filename }}.json
         
     - name: Create a pull request
+      env:
+        ContentJSON: ${{ fromJSON(github.event.inputs.content) }}
       uses: peter-evans/create-pull-request@v4
       with:
         token: ${{ secrets.PAT }}
