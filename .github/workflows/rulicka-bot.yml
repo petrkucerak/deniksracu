@@ -40,11 +40,20 @@ jobs:
         delete-branch: true
         title: 'A new toilet request:  ${{ github.event.inputs.title }}'
         body: |
-          New toilet 
+          | KEY | VALUE |
+          | ------ | ---------- |
+          | placeName | **Myslivna - Naše hospoda Smíchovská** |
+          | coords | `50.0348411` `15.7775986` |
+          | wayDescription | Zachody hned naproti vchodu |
+          | toiletType | hospoda, restarace, ... |
+          | category | `hasPaper` `hasWather` `Dobré pivo` |
+          | comment | Na pivko chodím rád, než dopijete jedno, už vám nesou druhé. |
+          | nickName | Pedro |
+          | timeStamp | 2022-10-15T19:32:24.737Z |
           - name: ${{ github.event.inputs.title }}
           - filename: ${{ github.event.inputs.filename }}.json
           ```json
-          ${{ github.event.inputs.content.placeName }}
+          ${{ toJSON(github.event.inputs.content) }}
           ```
         labels: |
           toilet
