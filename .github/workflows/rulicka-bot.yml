@@ -46,16 +46,14 @@ jobs:
           | coords | `${{ fromJSON(github.event.inputs.content).latitude }}` `${{ fromJSON(github.event.inputs.content).longtitude }}` |
           | wayDescription | ${{ fromJSON(github.event.inputs.content).wayDescription }} |
           | toiletType | ${{ fromJSON(github.event.inputs.content).toiletType }} |
-          | category | isClean: `${{ fromJSON(github.event.inputs.content).isClean }}` <br> hasPaper: `${{ fromJSON(github.event.inputs.content).hasPaper }}` <br> canLock: `${{ fromJSON(github.event.inputs.content).canLock }}` <br> hasWater: `${{ fromJSON(github.event.inputs.content).hasWater }}` <br> isFree: `${{ fromJSON(github.event.inputs.content).isFree }}` |
-          | bonusCategory | ```${{ toJSON(fromJSON(github.event.inputs.content).bonusCategory) }}``` |
           | comment | ${{ fromJSON(github.event.inputs.content).comment }} |
           | nickName | ${{ fromJSON(github.event.inputs.content).nickName }} |
           | timeStamp | ${{ fromJSON(github.event.inputs.content).timeStamp }} |
           
-          - filename: ${{ github.event.inputs.filename }}.json
+          Filename: ${{ github.event.inputs.filename }}.json
           
           ```json
-          ${{ github.event.inputs.content }}
+          ${{ toJSON(fromJSON(github.event.inputs.content)) }}
           ```
         labels: |
           toilet
