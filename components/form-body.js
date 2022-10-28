@@ -80,7 +80,7 @@ export default function FormBody() {
             <option>hospoda, restarace, ...</option>
             <option>nákupní středisko</option>
             <option>veřejné toalety</option>
-            <option>škola</option>
+            <option>škola, firma, ...</option>
             <option>úřad, banka, ...</option>
             <option>jiné</option>
           </select>
