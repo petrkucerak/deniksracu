@@ -44,7 +44,7 @@ jobs:
           - name: ${{ github.event.inputs.title }}
           - filename: ${{ github.event.inputs.filename }}.json
           ```json
-          ${{ github.event.inputs.content }}
+          ${{ github.event.inputs.content.placeName }}
           ```
         labels: |
           toilet
