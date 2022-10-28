@@ -14,6 +14,8 @@ on:
         description: 'Business name'
         required: true
         default: ''
+env:
+  ContentJSON: ${{ fromJSON(github.event.inputs.content) }}
 
 jobs:
   create_json:
@@ -54,6 +56,8 @@ jobs:
           - filename: ${{ github.event.inputs.filename }}.json
           ```json
           ${{ toJSON(github.event.inputs.content) }}
+          ${{ fromJSON(github.event.inputs.content) }}
+          ${{ env.ContentJSON }}
           ```
         labels: |
           toilet
