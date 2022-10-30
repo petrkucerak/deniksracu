@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { PwaIOSScripts } from "./pwa-iOS-scripts";
 
 export default function Meta() {
   const description =
@@ -10,8 +9,6 @@ export default function Meta() {
   const mainColor = `af8566ff`;
   const socialImage = "https://deniksracu.cz/asstes/logoSquare.png";
   const url = "https://deniksracu.cz/";
-
-  PwaIOSScripts();
   return (
     <Head>
       <title>Deník sráčů</title>
