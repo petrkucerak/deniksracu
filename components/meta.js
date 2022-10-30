@@ -7,6 +7,7 @@ export default function Meta() {
   const keywords =
     "Deník sráčů, záchod, toalety, WC, položit kabel, saulit, trůnění, sráč";
   const mainColor = `af8566ff`;
+  const socialImage = "https://deniksracu.cz/asstes/logoSquare.png";
   const url = "https://deniksracu.cz/";
   return (
     <Head>
@@ -110,13 +111,15 @@ export default function Meta() {
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:site" content="@deniksracu" />
+      <meta name="twitter:image" content={socialImage} />
+      <meta name="twitter:creator" content="@petrkucerak" />
 
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={title} />
       <meta property="og:url" content={url} />
+      <meta property="og:image" content={socialImage} />
 
       <meta name="robots" content="all" />
     </Head>
