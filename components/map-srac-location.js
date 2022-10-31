@@ -11,7 +11,7 @@ export default function SracLocation() {
         title: "Ukaž mi, kde jsem!",
       },
       locateOptions: {
-        enableHighAccuracy: true,
+        enableHighAccuracy: false,
       },
     })
     .addTo(map);
