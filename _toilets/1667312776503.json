@@ -1,1 +1,16 @@
-{"latitude":"50.10755190241975","longtitude":"14.406251048450228","placeName":"Přírodní památka Pecka","wayDescription":"Jednoduše vylezte na kopec. ","toiletType":"jiné","isClean":true,"hasPaper":false,"canLock":false,"hasWater":false,"isFree":true,"bonusCategory":["Výhled","přírodní"],"comment":"","nickName":"Pedro","timeStamp":"2022-11-01T14:26:16.503Z"}
+{
+  "latitude": "50.10755190241975",
+  "longtitude": "14.406251048450228",
+  "placeName": "Přírodní památka Pecka",
+  "wayDescription": "Jednoduše vylezte na kopec. ",
+  "toiletType": "přírodní zátiší",
+  "isClean": true,
+  "hasPaper": false,
+  "canLock": false,
+  "hasWater": false,
+  "isFree": true,
+  "bonusCategory": ["Výhled", "přírodní"],
+  "comment": "",
+  "nickName": "Pedro",
+  "timeStamp": "2022-11-01T14:26:16.503Z"
+}
