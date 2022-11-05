@@ -4,6 +4,7 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import "leaflet/dist/leaflet.css";
 import SracLocation from "../components/map-srac-location";
 import MapToilets from "../components/map-toilets";
+import MapLayersControl from "./map-layers-control";
 
 export default function Map() {
   return (
@@ -19,6 +20,7 @@ export default function Map() {
       />
       <SracLocation />
       <MapToilets />
+      <MapLayersControl />
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.css"
