@@ -86,8 +86,8 @@ export default function MapToilets() {
 }
 
 const toiletIcon = L.icon({
-  iconUrl: "/asstes/icons/toilet-makrer-win/marker-toilet-win-48x48.png",
-  iconSize: [38, 38],
+  iconUrl: "/asstes/icons/toilet-makrer-win/marker-toilet-win-32x32.png",
+  iconSize: [32, 32],
   iconAnchor: [0, 0],
   popupAnchor: [0, 0],
   // shadowUrl: "/asstes/icons/marker-toilet-48x84-transparent-shadows.svg",
