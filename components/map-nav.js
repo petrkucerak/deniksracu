@@ -32,10 +32,10 @@ export default function MapNav() {
 
   return (
     <>
-      <button className={closeClass} onClick={() => switchMenuContext()}>
+      <button className={closeClass} title="Zavřít menu" onClick={() => switchMenuContext()}>
         <IconX/>
       </button>
-      <button className={openClass} onClick={() => switchMenuContext()}>
+      <button className={openClass} title="Otevřít menu" onClick={() => switchMenuContext()}>
         <IconMenu2/>
       </button>
       <nav className={navClass}>
