@@ -86,11 +86,11 @@ export default function MapToilets() {
 }
 
 const toiletIcon = L.icon({
-  iconUrl: "/asstes/icons/marker-toilet-48x84-transparent.png",
-  iconSize: [24, 42],
+  iconUrl: "/asstes/icons/toilet-makrer-win/marker-toilet-win-48x48.png",
+  iconSize: [38, 38],
   iconAnchor: [0, 0],
   popupAnchor: [0, 0],
-  shadowUrl: "/asstes/icons/marker-toilet-48x84-transparent-shadows.svg",
-  shadowSize: [28.79, 50.4],
-  shadowAnchor: [2.3945, 4.19999],
+  // shadowUrl: "/asstes/icons/marker-toilet-48x84-transparent-shadows.svg",
+  // shadowSize: [28.79, 50.4],
+  // shadowAnchor: [2.3945, 4.19999],
 });
