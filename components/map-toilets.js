@@ -73,6 +73,8 @@ export default function MapToilets() {
 
         L.marker([toilets[id].latitude, toilets[id].longtitude], {
           icon: toiletIcon,
+          title: toilets[id].placeName,
+          alt: `Ikona typu ${toilets[id].toiletType}`,
         })
           .addTo(map)
           .bindPopup(toiletPopup);
