@@ -32,6 +32,7 @@ export default function FormBody() {
           <button
             onClick={() => setSracLocation()}
             className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500"
+            title="Získat aktuální polohu zařízení z GPS"
           >
             získat polohu
           </button>
@@ -158,6 +159,7 @@ export default function FormBody() {
             let tags = bonusTags;
             Form2JSONToilet(tags, `download`);
           }}
+          title="Stáhnout soubor s informacemi o toaletě"
         >
           Stáhnout
         </button>
@@ -167,6 +169,7 @@ export default function FormBody() {
             let tags = bonusTags;
             Form2JSONToilet(tags, `request`);
           }}
+          title="Vytvořit žádost o přidání záchodu do mapy"
         >
           Vytvořit request
         </button>
