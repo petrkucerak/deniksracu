@@ -9,7 +9,6 @@ export default function MapToilets() {
     .then((res) => res.json())
     .then((toilets) => {
       for (let id = 0; id < toilets.length; id += 1) {
-        
         // prepare the category string
         let category = `<ul class="">`;
         if (toilets[id].isClean) category += "<li>čisto</li>";
@@ -24,7 +23,8 @@ export default function MapToilets() {
 
         // prepare the way description string
         let wayDescriptionString = "";
-        if(toilets[id].wayDescription !== "") wayDescriptionString = `
+        if (toilets[id].wayDescription !== "")
+          wayDescriptionString = `
         <div>
           <h3 class="text-xl font-semibold mt-2">Jak se na místo dostat</h3>
           <p class="!my-0">${toilets[id].wayDescription}<p>
@@ -33,7 +33,8 @@ export default function MapToilets() {
 
         // prepare the comment string
         let commentString = "";
-        if(toilets[id].comment !== "") commentString = `
+        if (toilets[id].comment !== "")
+          commentString = `
         <div>
           <h3 class="text-xl font-semibold mt-2">Komentář</h3>
           <p class="!my-0">${toilets[id].comment}<p>
@@ -67,8 +68,10 @@ export default function MapToilets() {
         // render card
         const toiletPopup = L.popup({
           keepInView: true,
+          offset: L.point(15, 0),
+          autoPanPadding: L.point(0, 0),
           closeButton: false,
-          className: "",
+          className: "w-screen bottom-0",
         }).setContent(string);
 
         L.marker([toilets[id].latitude, toilets[id].longtitude], {
@@ -77,7 +80,10 @@ export default function MapToilets() {
           alt: `Ikona typu ${toilets[id].toiletType}`,
         })
           .addTo(map)
-          .bindPopup(toiletPopup);
+          .bindPopup(toiletPopup)
+          .on("click", (e) => {
+            console.log(e);
+          });
       }
     })
     .catch((err) => console.log(err));
