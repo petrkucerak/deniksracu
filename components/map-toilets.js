@@ -1,4 +1,5 @@
 import { useMap } from "react-leaflet";
+import { placeTypes } from "./toilet-types";
 
 const url = `/toilets/toilets-unsorted.json`;
 
@@ -11,11 +12,14 @@ export default function MapToilets() {
       for (let id = 0; id < toilets.length; id += 1) {
         // prepare the category string
         let category = `<ul class="">`;
-        if (toilets[id].isClean) category += "<li>čisto</li>";
-        if (toilets[id].hasPaper) category += "<li>toaleťák</li>";
-        if (toilets[id].canLock) category += "<li>zamykatelné</li>";
-        if (toilets[id].hasWater) category += "<li>tekoucí voda</li>";
-        if (toilets[id].isFree) category += "<li>zdarma</li>";
+        if (toilets[id].isClean) category += `<li class="rounded ">čisto</li>`;
+        if (toilets[id].hasPaper)
+          category += `<li class="rounded ">toaleťák</li>`;
+        if (toilets[id].canLock)
+          category += `<li class="rounded ">zamykatelné</li>`;
+        if (toilets[id].hasWater)
+          category += `<li class="rounded">tekoucí voda</li>`;
+        if (toilets[id].isFree) category += `<li class="rounded">zdarma</li>`;
         for (let i = 0; i < toilets[id].bonusCategory.length; i += 1) {
           category += `<li>${toilets[id].bonusCategory[i]}</li>`;
         }
@@ -40,6 +44,8 @@ export default function MapToilets() {
           <p class="!my-0">${toilets[id].comment}<p>
         </div>
         `;
+
+        // prepare the palce type
 
         //prepare date string
         let date = new Date(toilets[id].timeStamp);

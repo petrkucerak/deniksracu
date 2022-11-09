@@ -1,4 +1,4 @@
-export const placeTypes = [
+export const toiletTypes = [
   "hospoda, restarace, ...",
   "nákupní středisko",
   "veřejné toalety, toitoika",
