@@ -7,6 +7,7 @@ import { useState } from "react";
 import FromToggleQuestion from "./form-toggle-question";
 import TagsInput from "react-tagsinput";
 import { Form2JSONToilet } from "../lib/toilet";
+import { placeTypes } from "./placeTypes";
 
 export default function FormBody() {
   const { latitude, longitude, error } = sracLocation();
@@ -78,13 +79,13 @@ export default function FormBody() {
             id="toiletType"
             className="rounded border-0 text-gray-600 outline-none w-full mb-8"
           >
-            <option>hospoda, restarace, ...</option>
-            <option>nákupní středisko</option>
-            <option>veřejné toalety, toitoika</option>
-            <option>přírodní zátiší</option>
-            <option>škola, firma, ...</option>
-            <option>úřad, banka, ...</option>
-            <option>jiné</option>
+            <option>{placeTypes[0]}</option>
+            <option>{placeTypes[1]}</option>
+            <option>{placeTypes[2]}</option>
+            <option>{placeTypes[3]}</option>
+            <option>{placeTypes[4]}</option>
+            <option>{placeTypes[5]}</option>
+            <option>{placeTypes[6]}</option>
           </select>
           <LocalTitle
             title="Pospis cesty"
