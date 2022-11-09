@@ -50,8 +50,10 @@ export default function MapToilets() {
         // prepare the output string
         const string = `
           <div class="text-lg">
+          <div class="rounded-t-[12px] pt-4  pb-2 px-4 bg-[#af8566ff] text-white">
             <h2 class="text-2xl font-semibold">${toilets[id].placeName}</h2>
-            
+          </div>
+          <div class="m-4">
             <div class="font-mono text-base">
               <span>${toilets[id].latitude}</span>
               <span>${toilets[id].longtitude}</span>
@@ -63,15 +65,16 @@ export default function MapToilets() {
             ${commentString}
             <p class="text-base">${dateString} přidal ${toilets[id].nickName}<p>
           </div>
+          </div>
         `;
 
         // render card
         const toiletPopup = L.popup({
           keepInView: true,
           offset: L.point(15, 0),
-          autoPanPadding: L.point(0, 0),
+          autoPanPadding: L.point(15, 15),
           closeButton: false,
-          className: "w-screen bottom-0",
+          className: "",
         }).setContent(string);
 
         L.marker([toilets[id].latitude, toilets[id].longtitude], {
