@@ -1,5 +1,5 @@
 import { useMap } from "react-leaflet";
-import { placeTypes } from "./toilet-types";
+import { toiletTypes, toiletIcons } from "./toilet-types";
 
 const url = `/toilets/toilets-unsorted.json`;
 
@@ -46,6 +46,22 @@ export default function MapToilets() {
         `;
 
         // prepare the palce type
+        let toiletType = `<span class="center">`;
+        if (toilets[id].toiletType === toiletTypes[0])
+          toiletType += `${toiletIcons[0]}`;
+          if (toilets[id].toiletType === toiletTypes[1])
+          toiletType += `${toiletIcons[1]}`;
+          if (toilets[id].toiletType === toiletTypes[2])
+          toiletType += `${toiletIcons[2]}`;
+          if (toilets[id].toiletType === toiletTypes[3])
+          toiletType += `${toiletIcons[3]}`;
+          if (toilets[id].toiletType === toiletTypes[4])
+          toiletType += `${toiletIcons[4]}`;
+          if (toilets[id].toiletType === toiletTypes[5])
+          toiletType += `${toiletIcons[5]}`;
+          if (toilets[id].toiletType === toiletTypes[6])
+          toiletType += `${toiletIcons[6]}`;
+        toiletType += `</span>`;
 
         //prepare date string
         let date = new Date(toilets[id].timeStamp);
@@ -56,16 +72,20 @@ export default function MapToilets() {
         // prepare the output string
         const string = `
           <div class="text-lg">
-          <div class="rounded-t-[12px] pt-4  pb-2 px-4 bg-[#af8566ff] text-white">
+          <div class="rounded-t-[12px] pt-5 w-full pb-5 px-4 bg-[#af8566ff] text-white">
             <h2 class="text-2xl font-semibold">${toilets[id].placeName}</h2>
+            <div class="absolute left-0 w-full flex flex-col items-center">
+              <div class="rounded-full relative top-[-.5rem] p-2 bg-[#af8566ff]">
+                ${toiletType}
+              </div>
+            </div>
           </div>
-          <div class="m-4">
+          <div class="m-4 mt-10">
             <div class="font-mono text-base">
               <span>${toilets[id].latitude}</span>
               <span>${toilets[id].longtitude}</span>
             </div>
             
-            <span>${toilets[id].toiletType}</span>
             ${category}
             ${wayDescriptionString}
             ${commentString}
