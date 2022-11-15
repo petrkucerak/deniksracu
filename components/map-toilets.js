@@ -20,13 +20,13 @@ export default function MapToilets() {
     .then((toilets) => {
       for (let id = 0; id < toilets.length; id += 1) {
         // prepare the category string
-        let category = `<ul class="">`;
+        let category = `<ul class="svg-non-block">`;
         if (toilets[id].isClean)
-          category += `<li class="rounded ">${clearIcon}čisto</li>`;
+          category += `<li class="rounded">${clearIcon}čisto</li>`;
         if (toilets[id].hasPaper)
-          category += `<li class="rounded ">${paperIcon}toaleťák</li>`;
+          category += `<li class="rounded">${paperIcon}toaleťák</li>`;
         if (toilets[id].canLock)
-          category += `<li class="rounded ">${keyIcon}zamykatelné</li>`;
+          category += `<li class="rounded">${keyIcon}zamykatelné</li>`;
         if (toilets[id].hasWater)
           category += `<li class="rounded">${waterIcon}tekoucí voda</li>`;
         if (toilets[id].isFree)

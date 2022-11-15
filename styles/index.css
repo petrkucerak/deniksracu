@@ -77,6 +77,10 @@
 }
 /* End of the tagsinput */
 
+.svg-non-block svg{
+  @apply inline mr-2;
+}
+
 /* Start of map popup style */
 
 .leaflet-popup-content {
