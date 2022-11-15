@@ -77,7 +77,7 @@
 }
 /* End of the tagsinput */
 
-.svg-non-block svg{
+.svg-non-block svg {
   @apply inline mr-2;
 }
 

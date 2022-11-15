@@ -22,17 +22,17 @@ export default function MapToilets() {
         // prepare the category string
         let category = `<ul class="svg-non-block">`;
         if (toilets[id].isClean)
-          category += `<li class="rounded">${clearIcon}čisto</li>`;
+          category += `<li class="rounded text-red-600">${clearIcon}čisto</li>`;
         if (toilets[id].hasPaper)
-          category += `<li class="rounded">${paperIcon}toaleťák</li>`;
+          category += `<li class="rounded text-gray-500">${paperIcon}toaleťák</li>`;
         if (toilets[id].canLock)
-          category += `<li class="rounded">${keyIcon}zamykatelné</li>`;
+          category += `<li class="rounded text-green-500">${keyIcon}zamykatelné</li>`;
         if (toilets[id].hasWater)
-          category += `<li class="rounded">${waterIcon}tekoucí voda</li>`;
+          category += `<li class="rounded text-blue-400">${waterIcon}tekoucí voda</li>`;
         if (toilets[id].isFree)
-          category += `<li class="rounded">${freeIcon}zdarma</li>`;
+          category += `<li class="rounded text-yellow-500">${freeIcon}zdarma</li>`;
         for (let i = 0; i < toilets[id].bonusCategory.length; i += 1) {
-          category += `<li>${bonusIcon}${toilets[id].bonusCategory[i]}</li>`;
+          category += `<li class="text-gray-500">${bonusIcon}${toilets[id].bonusCategory[i]}</li>`;
         }
         category += "</ul>";
 
