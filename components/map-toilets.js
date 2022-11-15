@@ -83,25 +83,20 @@ export default function MapToilets() {
         // prepare the output string
         const string = `
           <div class="text-lg">
-          <div class="rounded-t-[12px] pt-5 w-full pb-5 px-4 bg-[#af8566ff] text-white">
-            <h2 class="text-2xl font-semibold">${toilets[id].placeName}</h2>
-            <div class="absolute left-0 w-full flex flex-col items-center">
-              <div class="rounded-full relative top-[-.5rem] p-2 bg-[#af8566ff]">
-                ${toiletType}
+            <div class="rounded-t-[12px] pt-5 w-full pb-5 px-4 bg-[#af8566ff] text-white">
+              <h2 class="text-2xl font-semibold">${toilets[id].placeName}</h2>
+              <div class="absolute left-0 w-full flex flex-col items-center">
+                <div class="rounded-full relative top-[-.5rem] p-2 bg-[#af8566ff]">
+                  ${toiletType}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="m-4 mt-10">
-            <div class="font-mono text-base">
-              <span>${toilets[id].latitude}</span>
-              <span>${toilets[id].longtitude}</span>
+            <div class="m-4 mt-10">
+              ${category}
+              ${wayDescriptionString}
+              ${commentString}
+              <p class="text-base">${dateString} přidal ${toilets[id].nickName}<p>
             </div>
-            
-            ${category}
-            ${wayDescriptionString}
-            ${commentString}
-            <p class="text-base">${dateString} přidal ${toilets[id].nickName}<p>
-          </div>
           </div>
         `;
 
