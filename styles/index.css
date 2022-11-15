@@ -66,16 +66,39 @@
 .srac-zelenac {
   @apply text-green-600;
 }
-.srac{
+.srac {
   @apply text-blue-600;
 }
-.srac-mazak{
+.srac-mazak {
   @apply text-pink-600 text-lg;
 }
-.velesrac{
+.velesrac {
   @apply text-[#af8566ff] font-semibold text-xl;
 }
 /* End of the tagsinput */
+
+.svg-non-block svg {
+  @apply inline mr-2;
+}
+
+/* Start of map popup style */
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  /* border: 2px solid green; */
+}
+.leaflet-popup-content-wrapper {
+  /* border: 2px solid red; */
+  /* padding: 0 !important; */
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.leaflet-popup-tip-container {
+  /* display: none; */
+}
+/* End of map popup style */
 
 /* Write you own custom component styles here */
 

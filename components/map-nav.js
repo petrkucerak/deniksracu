@@ -5,7 +5,7 @@ import { IconMenu2, IconX } from "@tabler/icons";
 export default function MapNav() {
   const [closeClass, setCloseClass] = useState("hidden");
   const [openClass, setOpenClass] = useState(
-    "z-[10001] fixed top-4 right-4 p-1 bg-white rounded border border-gray-600"
+    "z-[10001] fixed top-4 right-4 p-1 bg-white rounded border-2 border-opacity-50 border-gray-600"
   );
   const [navClass, setNavClass] = useState("hidden");
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function MapNav() {
     if (isOpen) {
       setCloseClass("hidden");
       setOpenClass(
-        "z-[10001] fixed top-4 right-4 p-1 bg-white rounded border border-gray-600"
+        "z-[10001] fixed top-4 right-4 p-1 bg-white rounded border-2 border-opacity-50 border-gray-600"
       );
       setNavClass("hidden");
       setIsOpen(false);
@@ -36,7 +36,7 @@ export default function MapNav() {
         <IconX/>
       </button>
       <button className={openClass} title="Otevřít menu" onClick={() => switchMenuContext()}>
-        <IconMenu2/>
+        <img src="/asstes/icons/toilet-makrer-win/toilet-paper-win.svg" className="w-7"/>
       </button>
       <nav className={navClass}>
         <h1 className="mt-5 font-bold text-2xl normal-case border-b-2 border-gray-600">
