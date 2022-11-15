@@ -1,5 +1,14 @@
 import { useMap } from "react-leaflet";
-import { toiletTypes, toiletIcons } from "./toilet-types";
+import {
+  toiletTypes,
+  toiletIcons,
+  freeIcon,
+  paperIcon,
+  waterIcon,
+  clearIcon,
+  keyIcon,
+  bonusIcon,
+} from "./toilet-types";
 
 const url = `/toilets/toilets-unsorted.json`;
 
@@ -12,16 +21,18 @@ export default function MapToilets() {
       for (let id = 0; id < toilets.length; id += 1) {
         // prepare the category string
         let category = `<ul class="">`;
-        if (toilets[id].isClean) category += `<li class="rounded ">čisto</li>`;
+        if (toilets[id].isClean)
+          category += `<li class="rounded ">${clearIcon}čisto</li>`;
         if (toilets[id].hasPaper)
-          category += `<li class="rounded ">toaleťák</li>`;
+          category += `<li class="rounded ">${paperIcon}toaleťák</li>`;
         if (toilets[id].canLock)
-          category += `<li class="rounded ">zamykatelné</li>`;
+          category += `<li class="rounded ">${keyIcon}zamykatelné</li>`;
         if (toilets[id].hasWater)
-          category += `<li class="rounded">tekoucí voda</li>`;
-        if (toilets[id].isFree) category += `<li class="rounded">zdarma</li>`;
+          category += `<li class="rounded">${waterIcon}tekoucí voda</li>`;
+        if (toilets[id].isFree)
+          category += `<li class="rounded">${freeIcon}zdarma</li>`;
         for (let i = 0; i < toilets[id].bonusCategory.length; i += 1) {
-          category += `<li>${toilets[id].bonusCategory[i]}</li>`;
+          category += `<li>${bonusIcon}${toilets[id].bonusCategory[i]}</li>`;
         }
         category += "</ul>";
 
@@ -49,17 +60,17 @@ export default function MapToilets() {
         let toiletType = `<span class="center">`;
         if (toilets[id].toiletType === toiletTypes[0])
           toiletType += `${toiletIcons[0]}`;
-          if (toilets[id].toiletType === toiletTypes[1])
+        if (toilets[id].toiletType === toiletTypes[1])
           toiletType += `${toiletIcons[1]}`;
-          if (toilets[id].toiletType === toiletTypes[2])
+        if (toilets[id].toiletType === toiletTypes[2])
           toiletType += `${toiletIcons[2]}`;
-          if (toilets[id].toiletType === toiletTypes[3])
+        if (toilets[id].toiletType === toiletTypes[3])
           toiletType += `${toiletIcons[3]}`;
-          if (toilets[id].toiletType === toiletTypes[4])
+        if (toilets[id].toiletType === toiletTypes[4])
           toiletType += `${toiletIcons[4]}`;
-          if (toilets[id].toiletType === toiletTypes[5])
+        if (toilets[id].toiletType === toiletTypes[5])
           toiletType += `${toiletIcons[5]}`;
-          if (toilets[id].toiletType === toiletTypes[6])
+        if (toilets[id].toiletType === toiletTypes[6])
           toiletType += `${toiletIcons[6]}`;
         toiletType += `</span>`;
 
