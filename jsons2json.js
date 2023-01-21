@@ -12,6 +12,10 @@ module.exports.jsons2json = () => {
     if (jsonRegex.test(filenames[id])) {
       const data = fs.readFileSync(`_toilets/${filenames[id]}`, "utf-8");
       const dataFormated = JSON.parse(data);
+
+      // if the nickname is an empty set the Ghost name
+      if (dataFormated.nickName == "") dataFormated.nickName = "Ghost";
+
       content.push(dataFormated);
     }
   }
