@@ -1,4 +1,4 @@
-import { IconBrandGithub, IconMail } from "@tabler/icons";
+import { IconBrandGithub, IconBrandInstagram, IconMail } from "@tabler/icons";
 import Link from "next/link";
 
 export default function Footer() {
@@ -8,6 +8,12 @@ export default function Footer() {
         <a className="w-[90vw]" target="_blank" rel="noreferrer">
           <IconBrandGithub className="inline mr-2" />
           deniksracu
+        </a>
+      </Link>
+      <Link href="https://www.instagram.com/deniksracu/">
+        <a className="w-[90vw]" target="_blank" rel="noreferrer">
+          <IconBrandInstagram className="inline mr-2" />
+          @deniksracu
         </a>
       </Link>
       <Link href="mailto:petr@khome.cz">
