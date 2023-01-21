@@ -8,6 +8,9 @@ import BackButton from "../components/back-button";
 import { getData2HallOfShits } from "../lib/api";
 
 export default function Hall({ nickNames }) {
+  function compareScore(a, b) {
+    return b.score - a.score;
+  }
   return (
     <>
       <Meta />
@@ -18,7 +21,7 @@ export default function Hall({ nickNames }) {
         <SectionBody>
           <LocalTitle title="Legendy" subtitle="" />
           <ul>
-            {nickNames.map((person) => {
+            {nickNames.sort(compareScore).map((person) => {
               return (
                 <li key={person.nickName} className={person.class}>
                   {person.title} <strong>{person.nickName}</strong>:{" "}
