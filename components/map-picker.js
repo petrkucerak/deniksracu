@@ -1,4 +1,10 @@
+import { useState } from "react";
 import { useMap } from "react-leaflet";
+
+// const [contextMarker, setContextMarker] = useState();
+
+let contextMarker = null;
+
 export default function MapPicker() {
   const map = useMap();
 
@@ -7,8 +13,15 @@ export default function MapPicker() {
     map,
     "contextmenu",
     (e) => {
-      console.log("Click!");
-      L.marker(e.latlng, { icon: poopIcon }).addTo(map).bindPopup(poopPopUp);
+      if (contextMarker != null) contextMarker.remove();
+
+      contextMarker = L.marker(e.latlng, {
+        icon: poopIcon,
+        keyboard: false,
+        alt: "Pozice noveho trunu",
+      });
+
+      contextMarker.addTo(map).bindPopup(poopPopUp);
     },
     this
   );
