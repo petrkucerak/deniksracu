@@ -8,11 +8,14 @@ import FromToggleQuestion from "./form-toggle-question";
 import TagsInput from "react-tagsinput";
 import { Form2JSONToilet } from "../lib/toilet";
 import { toiletTypes } from "./toilet-types";
+import { useRouter } from "next/router";
+// import dynamic from "next/dynamic";
 
 export default function FormBody() {
+  // const FormMapPreviewSSR = dynamic(() => import("./form-map-preview"), { ssr: false });
   const { latitude, longitude, error } = sracLocation();
-  const [long, setSracLong] = useState();
-  const [lat, setSracLat] = useState();
+  const [longT, setSracLong] = useState(null);
+  const [latT, setSracLat] = useState(null);
 
   const setSracLocation = () => {
     setSracLat(latitude);
@@ -20,6 +23,16 @@ export default function FormBody() {
   };
 
   const [bonusTags, setBonusTags] = useState([]);
+
+  // parse url parametrs
+  const router = useRouter();
+  const { lat, lng, diseabledButton } = router.query;
+  const query = router.query;
+
+  function trueFalseHandler(input) {
+    if (input == "true") return true;
+    else return false;
+  }
 
   return (
     <main className="flex flex-col items-center">
@@ -32,8 +45,13 @@ export default function FormBody() {
           />
           <button
             onClick={() => setSracLocation()}
-            className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500"
+            className={
+              !trueFalseHandler(query.diseabledButton)
+                ? `mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500`
+                : `mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500 cursor-not-allowed`
+            }
             title="Získat aktuální polohu zařízení z GPS"
+            disabled={trueFalseHandler(query.diseabledButton)} // disable button if position is in the URL
           >
             získat polohu
           </button>
@@ -44,9 +62,10 @@ export default function FormBody() {
               <input
                 type="number"
                 className="rounded border-0 text-gray-600"
-                defaultValue={lat}
+                defaultValue={latT || query.lat}
                 id="latitude"
-                placeholder="50.045567"
+                placeholder=""
+                disabled={trueFalseHandler(query.diseabledButton)} // disable if position is in the URL
               />
             </li>
             <li className="">
@@ -55,12 +74,14 @@ export default function FormBody() {
               <input
                 type="number"
                 className="rounded border-0 text-gray-600"
-                defaultValue={long}
+                defaultValue={longT || query.lng}
                 id="longtitude"
-                placeholder="15.822729"
+                placeholder=""
+                disabled={trueFalseHandler(query.diseabledButton)} // disable if position is in the URL
               />
             </li>
           </ul>
+          {/* <FormMapPreviewSSR lat={latT || query.lat} lng={longT || query.lng} /> */}
           <LocalTitle
             title="Název místa"
             subtitle="Každý správný trůní sál musí mít i svůj název. To, jak ji pojmenuješ, je jenom na tobě. Pamatuj, že název by měl být jedinečný, originální a popisovat dané místo."

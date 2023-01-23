@@ -100,6 +100,12 @@
 }
 /* End of map popup style */
 
+.diseable-map-selection {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 /* Write you own custom component styles here */
 
 /* Start purging... */

@@ -4,6 +4,7 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import "leaflet/dist/leaflet.css";
 import SracLocation from "../components/map-srac-location";
 import MapToilets from "../components/map-toilets";
+import MapPicker from "./map-picker";
 
 export default function Map() {
   return (
@@ -11,7 +12,7 @@ export default function Map() {
       center={[50.08061, 14.4101822]}
       zoom={16}
       scrollWheelZoom={true}
-      className="w-screen h-screen"
+      className="w-screen h-screen diseable-map-selection"
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
@@ -19,6 +20,7 @@ export default function Map() {
       />
       <SracLocation />
       <MapToilets />
+      <MapPicker />
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.css"
