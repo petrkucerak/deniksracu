@@ -8,7 +8,6 @@ import MapPicker from "./map-picker";
 import MapURLParams from "./map-url-params";
 
 export default function Map() {
-
   return (
     <MapContainer
       center={[50.08061, 14.4101822]}

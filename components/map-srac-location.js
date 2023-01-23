@@ -15,6 +15,6 @@ export default function SracLocation() {
       },
     })
     .addTo(map);
-  // locateControl.start();
+  locateControl.start();
   return null;
 }
