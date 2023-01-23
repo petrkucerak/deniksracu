@@ -24,7 +24,7 @@ export default function FormBody() {
 
   // parse url parametrs
   const router = useRouter();
-  const { lat, lng } = router.query;
+  const { lat, lng, diseabledButton } = router.query;
   const query = router.query;
 
   return (
@@ -40,6 +40,7 @@ export default function FormBody() {
             onClick={() => setSracLocation()}
             className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500"
             title="Získat aktuální polohu zařízení z GPS"
+            disabled={query.diseabledButton} // disable button if position is in the URL
           >
             získat polohu
           </button>

@@ -46,7 +46,7 @@ function string(e) {
   <div>${
     newToilteIntro[Math.floor(Math.random() * newToilteIntro.length)]
   }</div>
-  <a href="/form?lat=${e.latlng.lat}&lng=${e.latlng.lng}"><button class="
+  <a href="/form?lat=${e.latlng.lat}&lng=${e.latlng.lng}&diseabledButton=true"><button class="
     text-sm
     rounded-xl
     bg-yellow-500
