@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useMap } from "react-leaflet";
 
 // const [contextMarker, setContextMarker] = useState();
@@ -21,7 +20,7 @@ export default function MapPicker() {
         alt: "Pozice noveho trunu",
       });
 
-      contextMarker.addTo(map).bindPopup(poopPopUp);
+      contextMarker.addTo(map).bindPopup(poopPopUp.setContent(string(e)));
     },
     this
   );
@@ -41,12 +40,13 @@ const newToilteIntro = [
   "Doporučil bys to tu?",
 ];
 
-const string = `
+function string(e) {
+  return `
 <div class="text-lg px-4 py-5">
   <div>${
     newToilteIntro[Math.floor(Math.random() * newToilteIntro.length)]
   }</div>
-  <a><button class="
+  <a href="/form?lat=${e.latlng.lat}&lng=${e.latlng.lng}"><button class="
     text-sm
     rounded-xl
     bg-yellow-500
@@ -61,11 +61,11 @@ const string = `
   >přidat nový trůn</button></a>
 </div>
 `;
-
+}
 const poopPopUp = L.popup({
   keepInView: true,
   offset: L.point(0, 0),
   autoPanPadding: L.point(15, 15),
   closeButton: false,
   className: "",
-}).setContent(string);
+});

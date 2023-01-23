@@ -8,11 +8,12 @@ import FromToggleQuestion from "./form-toggle-question";
 import TagsInput from "react-tagsinput";
 import { Form2JSONToilet } from "../lib/toilet";
 import { toiletTypes } from "./toilet-types";
+import { useRouter } from "next/router";
 
 export default function FormBody() {
   const { latitude, longitude, error } = sracLocation();
-  const [long, setSracLong] = useState();
-  const [lat, setSracLat] = useState();
+  const [longT, setSracLong] = useState();
+  const [latT, setSracLat] = useState();
 
   const setSracLocation = () => {
     setSracLat(latitude);
@@ -20,6 +21,11 @@ export default function FormBody() {
   };
 
   const [bonusTags, setBonusTags] = useState([]);
+
+  // parse url parametrs
+  const router = useRouter();
+  const { lat, lng } = router.query;
+  const query = router.query;
 
   return (
     <main className="flex flex-col items-center">
@@ -44,9 +50,9 @@ export default function FormBody() {
               <input
                 type="number"
                 className="rounded border-0 text-gray-600"
-                defaultValue={lat}
+                defaultValue={latT || query.lat}
                 id="latitude"
-                placeholder="50.045567"
+                placeholder=""
               />
             </li>
             <li className="">
@@ -55,9 +61,9 @@ export default function FormBody() {
               <input
                 type="number"
                 className="rounded border-0 text-gray-600"
-                defaultValue={long}
+                defaultValue={longT || query.lng}
                 id="longtitude"
-                placeholder="15.822729"
+                placeholder=""
               />
             </li>
           </ul>
