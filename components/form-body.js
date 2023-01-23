@@ -9,11 +9,13 @@ import TagsInput from "react-tagsinput";
 import { Form2JSONToilet } from "../lib/toilet";
 import { toiletTypes } from "./toilet-types";
 import { useRouter } from "next/router";
+// import dynamic from "next/dynamic";
 
 export default function FormBody() {
+  // const FormMapPreviewSSR = dynamic(() => import("./form-map-preview"), { ssr: false });
   const { latitude, longitude, error } = sracLocation();
-  const [longT, setSracLong] = useState();
-  const [latT, setSracLat] = useState();
+  const [longT, setSracLong] = useState(null);
+  const [latT, setSracLat] = useState(null);
 
   const setSracLocation = () => {
     setSracLat(latitude);
@@ -79,6 +81,7 @@ export default function FormBody() {
               />
             </li>
           </ul>
+          {/* <FormMapPreviewSSR lat={latT || query.lat} lng={longT || query.lng} /> */}
           <LocalTitle
             title="Název místa"
             subtitle="Každý správný trůní sál musí mít i svůj název. To, jak ji pojmenuješ, je jenom na tobě. Pamatuj, že název by měl být jedinečný, originální a popisovat dané místo."
