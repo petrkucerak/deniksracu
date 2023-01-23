@@ -6,22 +6,12 @@ import SracLocation from "../components/map-srac-location";
 import MapToilets from "../components/map-toilets";
 import MapPicker from "./map-picker";
 import MapURLParams from "./map-url-params";
-import { useRouter } from "next/router";
-import { parseParamsFloat, parseParamsInt } from "../lib/utils";
 
 export default function Map() {
-  const route = useRouter();
-  const { lat, lng, zoom } = route.query;
-  const query = route.query;
-
-  let startLat = 50.08061;
-  let startLng = 14.4101822;
-  if(query.lat != null) startLat = parseParamsFloat(query.lat);
-  if(query.lng != null) startLng = parseParamsFloat(query.lng);
 
   return (
     <MapContainer
-      center={[startLat, startLng]}
+      center={[50.08061, 14.4101822]}
       zoom={16}
       scrollWheelZoom={true}
       className="w-screen h-screen diseable-map-selection"
