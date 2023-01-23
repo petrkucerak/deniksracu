@@ -27,6 +27,11 @@ export default function FormBody() {
   const { lat, lng, diseabledButton } = router.query;
   const query = router.query;
 
+  function trueFalseHandler(input) {
+    if (input == "true") return true;
+    else return false;
+  }
+
   return (
     <main className="flex flex-col items-center">
       <Section>
@@ -38,9 +43,13 @@ export default function FormBody() {
           />
           <button
             onClick={() => setSracLocation()}
-            className="mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500"
+            className={
+              !trueFalseHandler(query.diseabledButton)
+                ? `mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500`
+                : `mb-3 bg-yellow-400 text-white p-2 uppercase font-semibold text-sm rounded-xl hover:shadow duration-200 hover:bg-yellow-500 cursor-not-allowed`
+            }
             title="Získat aktuální polohu zařízení z GPS"
-            disabled={query.diseabledButton} // disable button if position is in the URL
+            disabled={trueFalseHandler(query.diseabledButton)} // disable button if position is in the URL
           >
             získat polohu
           </button>
@@ -54,6 +63,7 @@ export default function FormBody() {
                 defaultValue={latT || query.lat}
                 id="latitude"
                 placeholder=""
+                disabled={trueFalseHandler(query.diseabledButton)} // disable if position is in the URL
               />
             </li>
             <li className="">
@@ -65,6 +75,7 @@ export default function FormBody() {
                 defaultValue={longT || query.lng}
                 id="longtitude"
                 placeholder=""
+                disabled={trueFalseHandler(query.diseabledButton)} // disable if position is in the URL
               />
             </li>
           </ul>
