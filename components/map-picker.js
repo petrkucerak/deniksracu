@@ -5,7 +5,7 @@ export default function MapPicker() {
   // ToDo: click handler to hold
   L.DomEvent.addListener(
     map,
-    "click",
+    "contextmenu",
     (e) => {
       console.log("Click!");
       L.marker(e.latlng, { icon: poopIcon }).addTo(map).bindPopup(poopPopUp);
