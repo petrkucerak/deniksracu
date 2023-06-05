@@ -1,5 +1,5 @@
 export const toiletTypes = [
-  "hospoda, restarace, ...",
+  "hospoda, restaurace, ...",
   "nákupní středisko",
   "veřejné toalety, toitoika",
   "přírodní zátiší",
