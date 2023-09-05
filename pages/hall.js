@@ -22,12 +22,20 @@ export default function Hall({ nickNames }) {
           <LocalTitle title="Legendy" subtitle="" />
           <ul>
             {nickNames.sort(compareScore).map((person) => {
-              return (
-                <li key={person.nickName} className={person.class}>
-                  {person.title} <strong>{person.nickName}</strong>:{" "}
-                  {person.score} {person.extension}
-                </li>
-              );
+              if (person.nickName === "KajKaj")
+                return (
+                  <li key={person.nickName} className={person.class}>
+                    Velesráčka <strong>{person.nickName}</strong>:{" "}
+                    {person.score} {person.extension}
+                  </li>
+                );
+              else
+                return (
+                  <li key={person.nickName} className={person.class}>
+                    {person.title} <strong>{person.nickName}</strong>:{" "}
+                    {person.score} {person.extension}
+                  </li>
+                );
             })}
           </ul>
         </SectionBody>
