@@ -36,12 +36,10 @@ jobs:
         cat ${{ github.event.inputs.filename }}.json
         
     - name: Create a pull request
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v6
       with:
         token: ${{steps.generate_token.outputs.token}}
-        commit-message: Add ${{ github.event.inputs.filename }}.json toilet 
-        committer: Rulicka [Bot] <rulicka@deniksracu.cz>
-        author: Rulica <rulicka@deniksracu.cz>
+        commit-message: Add ${{ github.event.inputs.filename }}.json toilet
         signoff: false
         branch: new-toilet-${{ github.event.inputs.filename }}
         delete-branch: true
