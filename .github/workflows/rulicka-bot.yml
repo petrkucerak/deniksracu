@@ -11,7 +11,7 @@ on:
         required: true
         default: ''
       title:
-        description: 'Business name'
+        description: 'Place name'
         required: true
         default: ''
 
@@ -43,8 +43,9 @@ jobs:
         signoff: false
         branch: new-toilet-${{ github.event.inputs.filename }}
         delete-branch: true
-        title: 'A new toilet request:  ${{ github.event.inputs.title }}'
+        title: '${{ fromJSON(github.event.inputs.content).nickName }} is requesting the addition of a new toilet ${{ github.event.inputs.title }}'
         body: |
+          ${{ fromJSON(github.event.inputs.content).nickName }} is requesting the addition of a new toilet ${{ github.event.inputs.title }} with this parameters:
           | KEY | VALUE |
           | ------ | ---------- |
           | placeName | **${{ fromJSON(github.event.inputs.content).placeName }}** |
