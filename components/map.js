@@ -7,6 +7,7 @@ import MapToilets from "../components/map-toilets";
 import MapPicker from "./map-picker";
 
 export default function Map() {
+  const API_KEY="0pDMFK05UmFV-CqGrkNGlwvIIquKNNSwUaFxI2ZLXQo"
   return (
     <MapContainer
       center={[50.08061, 14.4101822]}
@@ -15,8 +16,8 @@ export default function Map() {
       className="w-screen h-screen diseable-map-selection"
     >
       <TileLayer
-        url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+        url={`https://api.mapy.cz/v1/maptiles/outdoor/256/{z}/{x}/{y}?apikey=${API_KEY}`}
+        attribution='<a href="https://api.mapy.cz/copyright" target="_blank" rel="noreferrer">&copy; Seznam.cz a.s. a další</a>'
       />
       <SracLocation />
       <MapToilets />
@@ -25,6 +26,7 @@ export default function Map() {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.css"
       />
+      <a href="http://mapy.cz/" target="_blank" rel="noreferrer" className="absolute z-[1000] bottom-0"><img alt="Mapy.cz logo" src="https://api.mapy.cz/img/api/logo.svg"/></a>
     </MapContainer>
   );
 }
