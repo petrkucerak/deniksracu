@@ -22,11 +22,12 @@ export default function Hall({ nickNames }) {
           <LocalTitle title="Legendy" subtitle="" />
           <ul>
             {nickNames.sort(compareScore).map((person) => {
-              if (person.nickName === "KajKaj")
+              if (person.nickName === "Kajkaj" || person.nickName === "Adélka")
                 return (
                   <li key={person.nickName} className={person.class}>
-                    Velesráčka <strong>{person.nickName}</strong>:{" "}
-                    {person.score} {person.extension}
+                    {person.title.replace("sráč", "sračka")}{" "}
+                    <strong>{person.nickName}</strong>: {person.score}{" "}
+                    {person.extension}{" "}
                   </li>
                 );
               else
@@ -46,6 +47,8 @@ export default function Hall({ nickNames }) {
             <li className="srac">Sráč: 5+ trůnů</li>
             <li className="srac-mazak">Sráč mazák: 20+ trůnů</li>
             <li className="velesrac">Velesráč: 50+ trůnů</li>
+            <li className="megasrac">Megasráč: 100+ trůnů</li>
+            <li className="gigasrac">Gigasráč: 200+ trůnů</li>
           </ul>
         </SectionBody>
       </Section>

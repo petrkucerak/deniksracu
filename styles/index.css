@@ -75,6 +75,13 @@
 .velesrac {
   @apply text-[#af8566ff] font-semibold text-xl;
 }
+.megasrac {
+  @apply text-[#7d52b6] font-semibold text-xl;
+}
+.gigasrac {
+  @apply text-[#ce3dc2] font-bold text-xl;
+  /* text-shadow: 0px 0px 5px #ce3dc2; */
+}
 /* End of the tagsinput */
 
 .svg-non-block svg {
