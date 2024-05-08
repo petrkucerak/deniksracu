@@ -6,6 +6,7 @@ export const toiletTypes = [
   "škola, firma, ...",
   "úřad, banka, ...",
   "jiné",
+  "sv skupinka",
 ];
 
 const color = "#af8566ff";
