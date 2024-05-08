@@ -11,7 +11,7 @@ on:
         required: true
         default: ''
       title:
-        description: 'Business name'
+        description: 'Place name'
         required: true
         default: ''
 
@@ -20,7 +20,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+
+    - name: 🔐 Generate a token
+      id: generate_token
+      uses: tibdex/github-app-token@v2
+      with:
+        app_id: ${{ secrets.RULICKA_ID }}
+        private_key: ${{ secrets.RULICKA_PRIVATE_KEY }}
     
     - name: Create a json file
       run: |
@@ -29,17 +36,16 @@ jobs:
         cat ${{ github.event.inputs.filename }}.json
         
     - name: Create a pull request
-      uses: peter-evans/create-pull-request@v4
+      uses: peter-evans/create-pull-request@v6
       with:
-        token: ${{ secrets.PAT }}
-        commit-message: Add ${{ github.event.inputs.filename }}.json toilet 
-        committer: Rulicka [Bot] <rulicka@deniksracu.cz>
-        author: Rulica <rulicka@deniksracu.cz>
+        token: ${{steps.generate_token.outputs.token}}
+        commit-message: Add ${{ github.event.inputs.filename }}.json toilet
         signoff: false
         branch: new-toilet-${{ github.event.inputs.filename }}
         delete-branch: true
-        title: 'A new toilet request:  ${{ github.event.inputs.title }}'
+        title: '${{ fromJSON(github.event.inputs.content).nickName }} is requesting the addition of a new toilet ${{ github.event.inputs.title }}'
         body: |
+          ${{ fromJSON(github.event.inputs.content).nickName }} is requesting the addition of a new toilet ${{ github.event.inputs.title }} with this parameters:
           | KEY | VALUE |
           | ------ | ---------- |
           | placeName | **${{ fromJSON(github.event.inputs.content).placeName }}** |
