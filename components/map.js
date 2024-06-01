@@ -10,7 +10,7 @@ import { isMobile } from "react-device-detect";
 export default function Map() {
   const API_KEY = "0pDMFK05UmFV-CqGrkNGlwvIIquKNNSwUaFxI2ZLXQo";
   let tileSize = "";
-  isMobile ? (tileSize = "256@2x") : "256";
+  isMobile ? (tileSize = "256@2x") : tileSize = "256";
   return (
     <MapContainer
       center={[50.08061, 14.4101822]}
