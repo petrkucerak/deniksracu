@@ -113,6 +113,10 @@
   user-select: none; /* Standard syntax */
 }
 
+#map {
+  image-rendering: pixelated;
+}
+
 /* Write you own custom component styles here */
 
 /* Start purging... */
