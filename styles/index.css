@@ -114,7 +114,7 @@
 }
 
 #map {
-  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 /* Write you own custom component styles here */
