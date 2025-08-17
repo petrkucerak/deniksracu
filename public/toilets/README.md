@@ -1,3 +1,0 @@
-# Toilets
-
-## Licence
