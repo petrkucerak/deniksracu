@@ -1,1 +1,0 @@
-# Sklad záchodů
