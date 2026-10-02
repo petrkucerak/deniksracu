@@ -1,18 +1,30 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
+import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
 import { useColorScheme } from 'react-native';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+import { FiltersProvider } from '@/hooks/use-filters';
+import { LocationProvider } from '@/hooks/use-user-location';
 
-SplashScreen.preventAutoHideAsync();
-
-export default function TabLayout() {
+export default function RootLayout() {
   const colorScheme = useColorScheme();
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
+      <LocationProvider>
+        <FiltersProvider>
+          <Stack screenOptions={{ headerBackButtonDisplayMode: 'minimal' }}>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="toilet/[id]"
+              options={{
+                presentation: 'formSheet',
+                headerShown: false,
+                sheetAllowedDetents: [0.5, 1],
+                sheetGrabberVisible: true,
+                sheetCornerRadius: 24,
+              }}
+            />
+          </Stack>
+        </FiltersProvider>
+      </LocationProvider>
     </ThemeProvider>
   );
 }

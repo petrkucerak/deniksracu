@@ -8,9 +8,11 @@
     "scheme": "deniksracu",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon",
       "bundleIdentifier": "cz.deniksracu.app",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "cz.deniksracu.app",
@@ -24,7 +26,12 @@
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "name": "Deník sráčů",
+      "shortName": "Deník sráčů",
+      "themeColor": "#AF8566",
+      "backgroundColor": "#AF8566",
+      "description": "Mapa záchodů s hodnocením jejich kvality."
     },
     "plugins": [
       "expo-router",
@@ -35,7 +42,15 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-audio",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Deník sráčů potřebuje tvoji polohu, aby ti ukázal nejbližší trůn."
+        }
+      ],
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true,

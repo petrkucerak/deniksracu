@@ -9,6 +9,9 @@ export const RANKS = [
   { min: 1, title: 'Sráč zelenáč' },
 ] as const;
 
+// Carried over from the web; replaced by a profile setting once accounts exist (phase 4).
+const FEMININE = new Set(['Kajkaj', 'Adélka']);
+
 export type HallEntry = { nickName: string; score: number; title: string };
 
 export function rankFor(score: number) {
@@ -26,6 +29,9 @@ export function buildHall(toilets: Toilet[]): HallEntry[] {
   const scores = new Map<string, number>();
   for (const t of toilets) scores.set(t.nickName, (scores.get(t.nickName) ?? 0) + 1);
   return [...scores]
-    .map(([nickName, score]) => ({ nickName, score, title: rankFor(score) }))
+    .map(([nickName, score]) => {
+      const title = rankFor(score);
+      return { nickName, score, title: FEMININE.has(nickName) ? title.replace('sráč', 'sračka') : title };
+    })
     .sort((a, b) => b.score - a.score || a.nickName.localeCompare(b.nickName, 'cs'));
 }

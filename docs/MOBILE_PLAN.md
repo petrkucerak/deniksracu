@@ -1,6 +1,6 @@
 # Deník sráčů – přechod na mobilní aplikaci
 
-Branch: `mobile-app` · Stav: Fáze 0 rozpracovaná
+Branch: `mobile-app` · Stav: Fáze 0 ✅ · Fáze 1 ✅ (čeká na ověření na telefonu)
 
 ## Rozhodnutí (CEO, 2. 10. 2026)
 
@@ -33,18 +33,19 @@ packages/
 
 Každá fáze končí ukázkou, kterou si CEO vyzkouší na telefonu.
 
-### Fáze 0 – Základ
+### Fáze 0 – Základ ✅
 - monorepo, Expo projekt, sdílené typy, lint a typecheck v CI
 - převod stávajících dat do formátu pro aplikaci
 - **Ukázka:** prázdná aplikace se spustí v Expo Go na telefonu
 
-### Fáze 1 – Mapa (náhrada stávajícího webu, jen čtení)
+### Fáze 1 – Mapa (náhrada stávajícího webu, jen čtení) ✅
 - mapa se všemi trůny, ikony podle typu, moje poloha
 - detail trůnu jako spodní panel místo popupu: kategorie, popis cesty, komentář, autor
 - „Nejbližší trůn“: seznam seřazený podle vzdálenosti a tlačítko Navigovat (otevře Mapy.cz, Google nebo Apple Maps)
 - filtry (zdarma, čisto, zamykatelné, typ…) a vyhledávání podle názvu
 - obrazovky O projektu (včetně audia), Desatero a Síň sráčů
-- offline cache dat
+- offline: data jsou součástí aplikace, takže seznam i detaily fungují bez signálu (mapový podklad ne)
+- web: staticky vygenerovaná stránka pro každý trůn (`/toilet/<id>`), dobré pro vyhledávače
 - **Ukázka:** aplikace, která umí všechno co dnešní web a k tomu víc
 
 ### Fáze 2 – Backend
@@ -91,9 +92,16 @@ Každá fáze končí ukázkou, kterou si CEO vyzkouší na telefonu.
 | Fáze | Co |
 | --- | --- |
 | 0–1 | telefon s aplikací **Expo Go** (Android/iOS) |
-| 1 | ověřit, že API klíč Mapy.cz nemá omezení na doménu (případně nový klíč) |
+| 1 | rozhodnout mapový podklad v aplikaci; pro Mapy.cz je potřeba nový klíč bez omezení na doménu (`EXPO_PUBLIC_MAPY_APP_KEY`), současný funguje jen na deniksracu.cz |
 | 1–2 | účet **Expo** (zdarma) pro EAS buildy |
 | 2 | účet **Cloudflare** s přístupem pro `wrangler` (D1, R2, Workers, Pages) |
 | 4 | Google Cloud projekt (OAuth klienti), účet pro posílání e-mailů (Resend) |
 | 4/7 | **Apple Developer** (99 USD/rok), **Google Play Console** (25 USD) |
 | 7 | přístup k DNS deniksracu.cz |
+
+## Technické poznámky
+
+- Bez `EXPO_PUBLIC_MAPY_APP_KEY` používá aplikace podklad Apple Maps (iOS) nebo Google Maps (Android). Web na deniksracu.cz používá Mapy.cz a při lokálním vývoji OpenStreetMap.
+- Android build mimo Expo Go potřebuje Google Maps API klíč (plugin `react-native-maps`). Zajistí se ve Fázi 2 spolu s EAS.
+- Ikony a markery se generují skriptem `apps/mobile/scripts/generate-assets.py` z `public/asstes/logoSquare.png`.
+- Na Raspberry Pi nejde zkompilovat Hermes bytecode (`hermesc` je jen pro x86). Pro lokální ověření bundlu se používá `npx expo export --no-bytecode`, ostré buildy běží na EAS.
