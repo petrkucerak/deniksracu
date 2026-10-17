@@ -115,7 +115,7 @@ export default function FormBody() {
           <textarea
             className="rounded border-0 h-20 text-gray-600"
             id="wayDescription"
-            placeholder="např. Na toaletu se lze dostat průchodem při skrze pasáž, která se nachzí napravo od vchodových dveří ..."
+            placeholder="např. Na toaletu se lze dostat průchodem při skrze pasáž, která se nachází napravo od vchodových dveří ..."
           ></textarea>
         </SectionBody>
       </Section>
@@ -146,7 +146,7 @@ export default function FormBody() {
             value={bonusTags}
             onChange={setBonusTags}
             maxTags={10}
-            inputProps={{ placeholder: "Přidej katogorii..." }}
+            inputProps={{ placeholder: "Přidej kategorii..." }}
           />
           <LocalTitle
             title="Slovní komentář"
